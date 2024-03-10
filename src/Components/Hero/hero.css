@@ -1,0 +1,44 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .content {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .content h2 {
+    text-align: center;
+    font-size: 43px;
+    margin-bottom: 10px;
+  }
+  
+  .content p {
+    text-align: left;
+  }
+  
+  .buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .buttons button {
+    padding: 10px 20px;
+    background-color: #345bbf;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .image {
+    flex: 1;
+  }
+  
+  .image img {
+    width: 100%;
+    height: auto;
+  }
+  

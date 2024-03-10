@@ -1,0 +1,40 @@
+.seo-container {
+    display: flex;
+    justify-content: center;
+    background-color: #f6f6f6;
+    width: 100%;
+  }
+  
+  .seo-content {
+    display: flex;
+    flex-direction: row;
+    max-width: 1200px;
+    justify-content: space-between; /* Distribute space evenly between containers */
+    align-items: center; /* Align items vertically */
+  }
+  
+  .seo-text-container {
+    flex: 2;
+    padding: 20px;
+    text-align: start;
+  }
+  
+  .seo-image-container {
+    flex: 2;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  .seo-image-container img {
+    width: 100%; /* Set the width to 100% of the container */
+    max-width: 500px; /* Set maximum width for the image */
+    height: auto; /* Maintain aspect ratio */
+  }
+  .seo-text-container p{
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+  }
+ 

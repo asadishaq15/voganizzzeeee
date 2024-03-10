@@ -1,0 +1,41 @@
+.software-process-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .software-process-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .box-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .box {
+    width: 200px;
+    padding: 20px;
+
+    border-radius: none;
+    margin: 10px;
+    text-align: left; 
+  }
+  
+  .box h3 {
+
+    color: #34b051;
+  }
+  
+  .box h4 {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+  
+  .box p {
+    font-size: 16px;
+  }
+  

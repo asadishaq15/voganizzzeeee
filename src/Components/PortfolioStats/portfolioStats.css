@@ -1,0 +1,78 @@
+.portfolio-stats-container {
+  display: flex;
+  justify-content: space-around;
+
+
+  text-align: center;
+ /* Adjust text color for better visibility */
+}
+
+.portfolio-stats{
+  background-color: #f4f4f4;
+  color: #fff;
+  padding: 40px;
+    margin-top: 110px;
+    margin-bottom: 0;
+
+}
+
+.stat-column {
+  flex: 1;
+  margin: 0 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align stat columns' content to the start (left) */
+}
+
+
+/* Updated styles for the icons */
+.stat-column .fa-icon {
+  color: #345bbf; /* Blue color */
+  font-size: 35px;
+  margin-bottom: 15px; /* Adjust margin-bottom for spacing */
+}
+
+.stat-label {
+  font-weight: bold;
+  margin: 12px 0;
+  color: #fff; /* Adjust text color for better visibility */
+  font-size: 18px;
+}
+
+.stat-value {
+  text-align: left;
+  font-size: 60px;
+  color: #000000;
+  font-weight: bold; /* Bold numeric values */
+  margin: 0;
+}
+
+.stat-description {
+  text-align: left;
+  color: #757575;
+  font-size: 16px;
+  line-height: 1.7em;
+}
+
+.image-column {
+  display: flex;
+  align-items: flex-end;
+}
+
+.image-column img {
+  width: 100%; /* Adjust width as needed */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.stats-heading {
+  text-align: left;
+  font-size: 30px;
+    line-height: 1.4;
+    font-family: open sans;
+    font-weight: 700;
+    color: #000;
+    font-style: normal;
+  margin-bottom: 20px;
+  margin-top: 110px;
+
+}
