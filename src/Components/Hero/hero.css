@@ -9,9 +9,10 @@
   }
   
   .content h2 {
-    text-align: center;
-    font-size: 43px;
-    margin-bottom: 10px;
+    text-align: left;
+    color: #0c0c0c;
+    font-size: 53px;
+    line-height: 1.2em;
   }
   
   .content p {
@@ -23,14 +24,31 @@
     gap: 10px;
   }
   
-  .buttons button {
-    padding: 10px 20px;
-    background-color: #345bbf;
+  .try-free{
+    font-size: 12px;
+    line-height: 1.2;
+    font-family: open sans;
+    font-weight: 600;
+    padding: 16px 18px;
+    border: 1px hidden #f9c03d;
+    background: #f9c03d;
     color: #fff;
-    border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+
+  .req-quote{
+    font-size: 12px;
+    line-height: 1.4;
+    letter-spacing: 1.5px;
+    font-family: open sans;
+    font-weight: 600;
+    padding: 14px 24px;
+    border: 1px solid #a5a5a5;
+    background: #fff;
+    color: #141414;
+    border-radius: 3px;
   }
   
   .image {

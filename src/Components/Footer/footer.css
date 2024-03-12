@@ -37,4 +37,29 @@
     border: none;
     cursor: pointer;
   }
+
+  .footer-bottom-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f4f4f4;
+    color: #fff;
+    padding: 20px;
+  }
+  
+  .footer-logo-container {
+    flex: 1;
+  }
+  
+  .footer-social-links {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .footer-social-links a {
+    margin-left: 10px; /* Adjust as needed */
+    /* Add styling for social links/buttons */
+  }
+  
   

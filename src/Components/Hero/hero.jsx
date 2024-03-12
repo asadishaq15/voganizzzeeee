@@ -9,12 +9,10 @@ const Hero = () => {
         <h2>Make your software better. Grow your business</h2>
         <p>Pair this understanding of the individual experience with powerful quantitative insights to inform you.</p>
         <div className="buttons">
-          <button>Try for Free</button>
+          <button className='try-free'></button>
+          <button className='req-quote'>REQUEST A DEMO</button>
         </div>
-        <div className="buttons">
-        
-          <button>Request a Demo</button>
-        </div>
+      
       </div>
       {/* Image container */}
       <div className="image">

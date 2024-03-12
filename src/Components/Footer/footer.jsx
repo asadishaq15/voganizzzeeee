@@ -1,6 +1,9 @@
 import React from 'react';
 import './footer.css'; // Import CSS file for styling
-
+import FacebookIcon from '@mui/icons-material/Facebook';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import InstagramIcon from '@mui/icons-material/Instagram';
 const Footer = () => {
   return (
     <div className="footer-container">
@@ -72,6 +75,17 @@ const Footer = () => {
           <li><button>Blog</button></li>
           <li><button>Contact Us</button></li>
         </ul>
+      </div>
+      <div className="footer-bottom-container">
+        <div className="footer-logo-container">
+          <img src='' alt="Logo" />
+        </div>
+        <div className="footer-social-links">
+        <FacebookIcon />
+          <TwitterIcon />
+          <LinkedInIcon />
+          <InstagramIcon />
+         </div>
       </div>
     </div>
   );

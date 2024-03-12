@@ -9,6 +9,7 @@ import ToolCategories from './Components/ToolCategories/toolCategories'
 import WorkingProcess from './Components/WorkingProcess/workingProcess'
 import Categories from './Components/Categories/categories'
 import Hero from './Components/Hero/hero'
+import ImproveContainers from './Components/ImproveBusiness/improveBusiness'
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
     <PortableSoftware/>
     <ToolCategories/>
     <WorkingProcess/>
+    <ImproveContainers/>
     <Footer/>
     </>
   )
