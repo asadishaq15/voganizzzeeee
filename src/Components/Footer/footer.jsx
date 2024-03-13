@@ -4,8 +4,10 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import CompanyLogo from "../../assets/KarmaLogo.png"
 const Footer = () => {
   return (
+    <div className="footer-container-main">
     <div className="footer-container">
       {/* Column 1 */}
       <div className="footer-column">
@@ -76,15 +78,16 @@ const Footer = () => {
           <li><button>Contact Us</button></li>
         </ul>
       </div>
+    </div>
       <div className="footer-bottom-container">
         <div className="footer-logo-container">
-          <img src='' alt="Logo" />
+          <img src={CompanyLogo} alt="Logo" />
         </div>
         <div className="footer-social-links">
-        <FacebookIcon />
-          <TwitterIcon />
-          <LinkedInIcon />
-          <InstagramIcon />
+        <FacebookIcon className="social-link" />
+        <TwitterIcon className="social-link" />
+        <LinkedInIcon className="social-link" />
+        <InstagramIcon className="social-link" />
          </div>
       </div>
     </div>

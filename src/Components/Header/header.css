@@ -13,135 +13,18 @@
     align-items: center;
     max-width: 1200px;
     z-index: inherit;
-    margin: 80px auto 0; /* Adjust top margin to accommodate the fixed top header */
     background: #fff!important;
   }
-  
-  .top-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-  
-  }
-  
-  .header-fab-icon {
-    font-size: 0.8em;
-    display: block;
-    width: 34px;
-    height: 33px;
-    line-height: 33px;
-    text-align: center;
-    border-left: 1px solid #f2f2f2;
-  }
-  
-  .social-links {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
-    font-weight: 300;
-    color: #666;
-  }
-  
-  .site-header .social-link {
-    margin-right: 10px; 
-  }
-  
-  
-  .site-header .social-links .social-link {
-    display: inline-block;
-  
-    transition: background-color 0.3s ease;
-  }
-  
-  /* Facebook */
-  .site-header .social-links .social-link:nth-child(1):hover {
-    background-color: #4664a7;
-    color: white;
-  }
-  
-  /* Twitter */
-  .site-header .social-links .social-link:nth-child(2):hover {
-    background-color: #1da1f2;
-    color: white;
-  }
-  
-  /* Instagram */
-  .site-header .social-links .social-link:nth-child(3):hover {
-    background-color: #d72d4c;
-    color: white;
-  }
-  
-  /* LinkedIn */
-  .site-header .social-links .social-link:nth-child(4):hover {
-    background-color: #0077b5;
-    color: white;
-  }
-  
-  /* WhatsApp */
-  .site-header .social-links .social-link:nth-child(5):hover {
-    background-color: #1eba57;
-    color: white;
-  }
-  
-  .top-header .contact-info {
-    display: flex;
-    align-items: center;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 13px;
-    font-weight: 300;
-    color: #666;
-    overflow-x: hidden;
-    position: relative;
-    padding-right: 15px;
-    padding-left: 15px;
-  }
-  
-  .top-header .contact-info span {
-    display: inline-block;
-    font-size: 12px;
-    line-height: 0px;
-    padding: 6px;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
-    cursor: pointer;
-    border-left: 2px solid #666;
-    color: #666;
-    box-sizing: border-box;
-  }
-  
-  .site-header .contact-info span:hover {
-    color: #2259c8;
-  }
-  
-  .social-and-quote {
-    display: flex;
-    align-items: center;
-  }
-  
-  .social-links {
-    display: flex;
-    padding: 10px;
-  }
-  
-  .social-links .social-link {
-    margin-right: 0.5rem;
-    color: #000;
-  }
-  
-  .quote-button {
-    background-color: #2356bd;
-    color: #ffffff;
-    border: none;
-    padding: 0.3rem 1rem;
-    line-height: 33px!important;
-    cursor: pointer;
-  }
+
   
   .Header-navigations {
     background: #fff!important;
     margin-bottom: 0;
     border: none;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
     position: relative;
     min-height: 20px;
     box-sizing: border-box;
@@ -230,10 +113,8 @@
   .site-header .navbar ul {
     margin-left: 0;
     position: relative;
-    display: block;
-    margin-left: 6px;
+ margin-right: 140px;
     float: left;
-    position: relative;
     display: block;
     list-style-type: none;
     display: flex;
@@ -242,39 +123,50 @@
   }
   
   .site-header .navbar ul li {
-    margin: 0 1.5rem;
+    margin: 0 0.9rem;
   }
   
   .site-header .navbar ul li a {
-    color: #999;
+    color: #333;
     display: block;
-    font-size: 14px;
-    font-weight: 400;
-    padding: 28px 15px 28px 15px;
+    font-family: open sans, Sans-serif;
+    font-size: 18px;
+    letter-spacing: 0;
+    text-align: center; /* Center align the text */
+    padding: 4px 0; /* Adjust vertical padding */
+    margin: 0 auto; /* Center the links horizontally */
+   max-width: 750px; /* Set width to fit content */
     overflow: hidden;
     font-weight: 400;
+
     text-shadow: 0 1px 0 rgba(255,255,255,.25);
     line-height: 20px;
     box-sizing: border-box;
     list-style: none;
+    text-decoration: none;
     border-bottom: 2px solid transparent; /* Add initial border */
     transition: color 0.3s ease, border-bottom-color 0.3s ease; /* Transition color and border-color */
   }
+
   
-  .site-header .navbar ul li a:hover,
-  .site-header .navbar ul li a.active {
-    color: #184cb5;
-    border-bottom-color: #184cb5; /* Change border color when hovered */
+  .Free-trail-button{
+    font-size: 12px;
+    line-height: 1.2;
+    font-family: open sans;
+    font-weight: 600;
+    margin-top: 10px;
+    padding: 16px 18px;
+    border: 1px hidden #f9c03d;
+    background: #f9c03d;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
   }
-  
-  .navigation-links ul li a.active,
-  .navigation-links ul li a:hover,
-  .dropdown.active .dropbtn {
-    color: #184cb5;
-    border-bottom-color: #184cb5;
+
+  .Free-trail-button:hover{
+    background-color: #d39606;
   }
-  
-  
   .site-header .fa-bars {
     color: #000000;
     cursor: pointer;

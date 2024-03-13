@@ -1,0 +1,128 @@
+.component-container {
+    padding: 20px;
+  }
+  
+  .heading {
+    text-align: center;
+  }
+  
+  .description {
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+  
+  .features-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .images-container {
+    flex: 1.5;
+    display: flex;
+    justify-content: flex-start;
+    background-image: url('/Users/asad/Desktop/Karma/frontend/src/assets/background.png');
+    background-size: 120px 30px; 
+    position: relative; 
+  }
+  
+  .image-container {
+    position: relative;
+  }
+  
+  .image-container img {
+    position: absolute;
+    width: 250px;
+  }
+  
+  .image2 {
+    top: 32%;
+    left: 300px;
+    transform: translate(-50%, -50%);
+  }
+  
+  .image3 {
+    top: 50%;
+    left: 600px;
+    transform: translate(-100%, -50%);
+  }
+  
+  .text-container {
+    flex: 1;
+  }
+  
+  .feature {
+    margin-bottom: 20px;
+  }
+  
+  .feature h2 {
+    margin-right: 50px; /* Add space between the arrow and the heading */
+  }
+  
+  .arrow {
+    font-size: 34px;
+    position: relative;
+    color: rgb(100, 223, 34);
+  }
+  
+  .feature p {
+    text-align: left;
+    color: #757575;
+    font-size: 16px;
+    line-height: 1.7em;
+    margin-left: 40px;
+  }
+  
+  .action-button {
+    font-size: 12px;
+    line-height: 1.2;
+    font-family: open sans;
+    font-weight: 600;
+    padding: 16px 18px;
+    border: 1px hidden #f9c03d;
+    background: #f9c03d;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 40px;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Media query for smaller screens */
+  @media only screen and (max-width: 768px) {
+    .component-container {
+      padding: 10px; /* Adjust padding for smaller screens */
+    }
+  
+    .features-container {
+      flex-direction: column; /* Switch to column layout for smaller screens */
+    }
+  
+    .images-container {
+      flex: 1; /* Reset flex property for smaller screens */
+      margin-bottom: 20px; /* Add margin between images and text for smaller screens */
+    }
+  
+    .image-container img {
+      width: 100%; /* Ensure images resize properly for smaller screens */
+    }
+  
+    .text-container {
+      margin: 0;
+    }
+  
+    .feature h2 {
+      margin-right: 0; /* Remove right margin for arrow */
+    }
+  
+    .arrow {
+      margin-right: 10px; /* Add space between arrow and text */
+    }
+  
+    .action-button {
+      width: 100%; /* Make button full width for smaller screens */
+      font-size: 14px; /* Adjust font size for smaller screens */
+    }
+  }
+  

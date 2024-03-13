@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { BrowserRouter, Link } from 'react-router-dom';
-
+import CompanyLogo from "../../assets/KarmaLogo.png"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAngleDown } from '@fortawesome/free-solid-svg-icons'; // Import the arrow down icon
 import './header.css';
 
 const Header = () => {
@@ -24,8 +26,6 @@ const Header = () => {
     setActiveDropdown(dropdown === activeDropdown ? null : dropdown);
     setActiveLink(null); // Close active link when a dropdown is clicked
   };
-
-  
 
   useEffect(() => {
     // Close navbar when clicked outside
@@ -52,22 +52,20 @@ const Header = () => {
   return (
 
     <header className={`site-header ${isNavOpen ? 'open' : ''}`} ref={navRef}>
-   
-    
     <div className="Header-navigations">
       <div className="navigation-container">
         <div className="companyLogo">
           <Link to="/" className="site-logo">
-            <img src='' alt="Logo" />
+            <img src={CompanyLogo} alt="Logo" />
           </Link>
         </div>
         <div className={`fas fa-bars ${isNavOpen ? 'open' : ''}`} onClick={toggleNav}  ></div>
         <div className="navigation-links" >
           <nav className={`navbar ${isNavOpen ? 'open' : ''}`}>
             <ul className="navigation-links">
-              <li><Link to="/" className={activeLink === '/' ? 'active' : ''} onClick={() => {toggleLink('/'); setIsNavOpen(false)}}>Home</Link></li>
+              <li><Link to="/" className={activeLink === '/' ? 'active' : ''} onClick={() => {toggleLink('/'); setIsNavOpen(false)}}>Home <FontAwesomeIcon icon={faAngleDown} /></Link></li>
               <li className={`dropdown ${activeDropdown === 'services' ? 'active' : ''}`}>
-                <Link to="/services" className="dropbtn" onClick={() => toggleDropdown('services')}>Services</Link>
+                <Link to="/services" className="dropbtn" onClick={() => toggleDropdown('services')}>Pages <FontAwesomeIcon icon={faAngleDown} /></Link>
                 <div className={`dropdown-content ${activeDropdown === 'services' ? 'open' : ''}`}>
                   <Link to="/web-development" onClick={() => {setActiveDropdown(null); setIsNavOpen(false)}}>Web Development</Link>
                   <Link to="/graphic-designing" onClick={() => {setActiveDropdown(null); setIsNavOpen(false)}}>Graphic Designing</Link>
@@ -75,19 +73,18 @@ const Header = () => {
                   <Link to="/digital-marketing" onClick={() => {setActiveDropdown(null); setIsNavOpen(false)}}>Digital Marketing</Link>
                 </div>
               </li>
-              <li><Link to="/portfolio" className={activeLink === '/portfolio' ? 'active' : ''} onClick={() => {toggleLink('/portfolio'); setIsNavOpen(false)}}>Portfolio</Link></li>
-              <li><Link to="/testimonials" className={activeLink === '/testimonials' ? 'active' : ''} onClick={() => {toggleLink('/testimonials'); setIsNavOpen(false)}}>Testimonials</Link></li>
+              <li><Link to="/portfolio" className={activeLink === '/portfolio' ? 'active' : ''} onClick={() => {toggleLink('/portfolio'); setIsNavOpen(false)}}>Projects <FontAwesomeIcon icon={faAngleDown} /></Link></li>
+              <li><Link to="/testimonials" className={activeLink === '/testimonials' ? 'active' : ''} onClick={() => {toggleLink('/testimonials'); setIsNavOpen(false)}}>Blog <FontAwesomeIcon icon={faAngleDown} /></Link></li>
               <li className={`dropdown ${activeDropdown === 'contact' ? 'active' : ''}`} ref={navRef}>
-                <Link to="/contact" className="dropbtn" onClick={() => toggleDropdown('contact')}>Contact</Link>
+                <Link to="/contact" className="dropbtn" onClick={() => toggleDropdown('contact')}>Contact <FontAwesomeIcon icon={faAngleDown} /></Link>
                 <div className={`dropdown-content ${activeDropdown === 'contact' ? 'open' : ''}`}>
                   <Link to="/contact" onClick={() => {setActiveDropdown(null); setIsNavOpen(false)}}>Contact Us</Link>
                   <Link to="/request-quote" onClick={() => {setActiveDropdown(null); setIsNavOpen(false)}}>Get A Quote</Link>
                 </div>
               </li>
-              <li><Link to="/faq" className={activeLink === '/faq' ? 'active' : ''} onClick={() => {toggleLink('/faq'); setIsNavOpen(false)}}>FAQ</Link></li>
             </ul>
             <Link to="request-quote">
-            <button className="quote-button">Get a Free Quote</button>
+            <button className="Free-trail-button">START A FREE TRAIL</button>
           </Link>
           </nav>
         </div>

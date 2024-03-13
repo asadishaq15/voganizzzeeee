@@ -10,17 +10,22 @@ import WorkingProcess from './Components/WorkingProcess/workingProcess'
 import Categories from './Components/Categories/categories'
 import Hero from './Components/Hero/hero'
 import ImproveContainers from './Components/ImproveBusiness/improveBusiness'
+import DiverseTool from './Components/DiverseTool/diverseTool'
+import Testimonials from './Components/Testimonials/testimonials'
 
 function App() {
 
   return (
     <>
+    <Header/>
     <Hero/>
     <Categories/>
+    <DiverseTool/>
     <PortfolioStats/>
     <PortableSoftware/>
     <ToolCategories/>
     <WorkingProcess/>
+    <Testimonials/>
     <ImproveContainers/>
     <Footer/>
     </>

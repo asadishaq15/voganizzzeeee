@@ -55,3 +55,12 @@ h5 {
     background-color: #d49c1a;;
   }
   
+
+  h5 {
+    font-size: 16px;
+    line-height: 1.4;
+    font-family: open sans;
+    font-weight: 700;
+    color: #000;
+    font-style: normal;
+}

@@ -1,10 +1,14 @@
 .footer-container {
+  display: flex;
+  align-items: center;
+  background-color: #f4f4f4;
+  color: #fff;
+  height: 100%;
+  }
+  .footer-container-main{
     display: flex;
-    justify-content: space-around;
-    align-items: center; 
-    background-color: #f4f4f4;
-    color: #fff;
-    height: 100%; 
+    flex-direction: column;
+
   }
   
   .footer-column {
@@ -16,15 +20,18 @@
     color: #000;
     font-size: 18px;
     margin-bottom: 10px;
+    text-align: left;
   }
   
   .footer-column ul {
     list-style-type: none;
     padding: 0;
+
   }
   
   .footer-column ul li {
     margin-bottom: 5px;
+    text-align: left;
 
   }
   
@@ -55,8 +62,22 @@
     flex: 1;
     display: flex;
     justify-content: flex-end;
+    margin-right: 30px;
+    gap: 10px;
+    color:green;
   }
-  
+  .social-link{
+    border: 1px solid rgb(167, 160, 160);
+    border-radius: 50px;
+    padding: 8px;
+    cursor: pointer;
+    transition: color 0.3s, background-color 0.3s; 
+  }
+  .social-link:hover{
+    color: white;
+    background-color: #706868;
+
+  }
   .footer-social-links a {
     margin-left: 10px; /* Adjust as needed */
     /* Add styling for social links/buttons */
