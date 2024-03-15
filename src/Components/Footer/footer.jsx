@@ -7,6 +7,8 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import CompanyLogo from "../../assets/KarmaLogo.png"
 const Footer = () => {
   return (
+    <div className="main">
+    <div className="container-main">
     <div className="footer-container-main">
     <div className="footer-container">
       {/* Column 1 */}
@@ -90,6 +92,8 @@ const Footer = () => {
         <InstagramIcon className="social-link" />
          </div>
       </div>
+    </div>
+    </div>
     </div>
   );
 };

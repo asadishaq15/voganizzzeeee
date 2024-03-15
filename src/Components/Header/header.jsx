@@ -66,21 +66,13 @@ const Header = () => {
               <li><Link to="/" className={activeLink === '/' ? 'active' : ''} onClick={() => {toggleLink('/'); setIsNavOpen(false)}}>Home <FontAwesomeIcon icon={faAngleDown} /></Link></li>
               <li className={`dropdown ${activeDropdown === 'services' ? 'active' : ''}`}>
                 <Link to="/services" className="dropbtn" onClick={() => toggleDropdown('services')}>Pages <FontAwesomeIcon icon={faAngleDown} /></Link>
-                <div className={`dropdown-content ${activeDropdown === 'services' ? 'open' : ''}`}>
-                  <Link to="/web-development" onClick={() => {setActiveDropdown(null); setIsNavOpen(false)}}>Web Development</Link>
-                  <Link to="/graphic-designing" onClick={() => {setActiveDropdown(null); setIsNavOpen(false)}}>Graphic Designing</Link>
-                  <Link to="/seo-services" onClick={() => {setActiveDropdown(null); setIsNavOpen(false)}}>SEO Services</Link>
-                  <Link to="/digital-marketing" onClick={() => {setActiveDropdown(null); setIsNavOpen(false)}}>Digital Marketing</Link>
-                </div>
+  
               </li>
               <li><Link to="/portfolio" className={activeLink === '/portfolio' ? 'active' : ''} onClick={() => {toggleLink('/portfolio'); setIsNavOpen(false)}}>Projects <FontAwesomeIcon icon={faAngleDown} /></Link></li>
               <li><Link to="/testimonials" className={activeLink === '/testimonials' ? 'active' : ''} onClick={() => {toggleLink('/testimonials'); setIsNavOpen(false)}}>Blog <FontAwesomeIcon icon={faAngleDown} /></Link></li>
               <li className={`dropdown ${activeDropdown === 'contact' ? 'active' : ''}`} ref={navRef}>
                 <Link to="/contact" className="dropbtn" onClick={() => toggleDropdown('contact')}>Contact <FontAwesomeIcon icon={faAngleDown} /></Link>
-                <div className={`dropdown-content ${activeDropdown === 'contact' ? 'open' : ''}`}>
-                  <Link to="/contact" onClick={() => {setActiveDropdown(null); setIsNavOpen(false)}}>Contact Us</Link>
-                  <Link to="/request-quote" onClick={() => {setActiveDropdown(null); setIsNavOpen(false)}}>Get A Quote</Link>
-                </div>
+               
               </li>
             </ul>
             <Link to="request-quote">

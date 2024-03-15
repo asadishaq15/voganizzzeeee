@@ -1,7 +1,6 @@
 .software-process-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
   text-align: center;
 }
 
@@ -14,23 +13,22 @@
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  padding: 0%;
+  border-top: 1px solid rgb(201, 197, 197);
 }
 
-.box {
-  width: 200px;
-  padding: 20px;
-  border-radius: 8px;
-  margin: 10px;
+
+.boxp{
+  width: 180px;
   text-align: left;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s ease;
 }
 
 .box:hover {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.box h3 {
+.box-number{
+  text-align: left;
   color: #34b051;
 }
 
@@ -40,5 +38,10 @@
 }
 
 .box p {
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
   font-size: 16px;
+  line-height: 1.7em;
 }

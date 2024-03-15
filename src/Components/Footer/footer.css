@@ -1,8 +1,14 @@
+.main{
+
+  background-color: #f4f4f4;
+
+}
+
 .footer-container {
   display: flex;
   align-items: center;
-  background-color: #f4f4f4;
-  color: #fff;
+
+
   height: 100%;
   }
   .footer-container-main{
@@ -10,7 +16,13 @@
     flex-direction: column;
 
   }
-  
+  .container-main{
+
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
   .footer-column {
     width: 20%;
     text-align: center;
@@ -49,9 +61,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #f4f4f4;
-    color: #fff;
-    padding: 20px;
   }
   
   .footer-logo-container {
@@ -79,8 +88,8 @@
 
   }
   .footer-social-links a {
-    margin-left: 10px; /* Adjust as needed */
-    /* Add styling for social links/buttons */
+    margin-left: 10px; 
+  
   }
   
   

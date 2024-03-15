@@ -1,16 +1,16 @@
 .portfolio-stats-container {
   display: flex;
-  justify-content: space-around;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 
 
-  text-align: center;
- /* Adjust text color for better visibility */
 }
 
 .portfolio-stats{
   background-color: #f4f4f4;
   color: #fff;
-  padding: 40px;
+
     margin-top: 110px;
     margin-bottom: 0;
 
@@ -65,7 +65,7 @@
 }
 
 .stats-heading {
-  text-align: left;
+
   font-size: 30px;
     line-height: 1.4;
     font-family: open sans;
@@ -73,6 +73,8 @@
     color: #000;
     font-style: normal;
   margin-bottom: 20px;
-  margin-top: 110px;
+max-width: 1200px;
+margin-left: auto;
+margin-right: auto;
 
 }

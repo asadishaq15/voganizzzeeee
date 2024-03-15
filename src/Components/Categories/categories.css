@@ -8,22 +8,25 @@
   }
   
   .boxes-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
   
   .box {
-    background-color: #f4f4f4;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
+    flex: 0 0 calc(27.33% - 20px);/* Adjust width for each box */
+    margin: 20px;
+    box-shadow: none; 
   }
+  .box:hover{
+    box-shadow: none;
+  }
+
   
   .box .box-content {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    text-align: left;
+   
     margin-bottom: 10px;
   }
   
@@ -40,8 +43,16 @@
   }
   
   .box p {
-    font-size: 14px;
-    line-height: 1.5;
-    color: #333;
+    font-size: 16px;
+    line-height: 1.7em;
+    text-align: left;
+    color: #757575;
+
+  }
+
+  @media screen and (max-width: 768px) {
+    .box {
+  flex: 0 0 calc(50% - 40px);  /* Adjust width for smaller screens */
+    }
   }
   

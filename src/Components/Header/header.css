@@ -1,13 +1,13 @@
 .site-header {
     background-color: #fff;
     width: 100%;
-    position: relative;
+    position: fixed;
     z-index: 1000;
   }
   
 
   .navigation-container {
-  
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -26,9 +26,9 @@
     margin-right: auto;
     text-align: center;
     position: relative;
-    min-height: 20px;
+
     box-sizing: border-box;
-    display: block;
+
   }
   
   
@@ -58,7 +58,7 @@
   }
   /* Dropdown Button */
   .dropbtn {
-    font-size: 14px; /* Reduced font size */
+    font-size: 14px;
     border: none;
     outline: none;
     color: black;
@@ -132,10 +132,10 @@
     font-family: open sans, Sans-serif;
     font-size: 18px;
     letter-spacing: 0;
-    text-align: center; /* Center align the text */
-    padding: 4px 0; /* Adjust vertical padding */
-    margin: 0 auto; /* Center the links horizontally */
-   max-width: 750px; /* Set width to fit content */
+    text-align: center; 
+    padding: 4px 0;
+    margin: 0 auto; 
+   max-width: 750px; 
     overflow: hidden;
     font-weight: 400;
 
@@ -145,7 +145,7 @@
     list-style: none;
     text-decoration: none;
     border-bottom: 2px solid transparent; /* Add initial border */
-    transition: color 0.3s ease, border-bottom-color 0.3s ease; /* Transition color and border-color */
+    transition: color 0.3s ease, border-bottom-color 0.3s eas;
   }
 
   
@@ -271,9 +271,9 @@
     margin: 2px 5px;
     box-sizing: border-box;
     text-decoration: none;
-    padding: 8px 0; /* Adjust padding to decrease height */
-    font-size: 14px; /* Adjust font size to decrease height */
-    line-height: 1; /* Ensure consistent height */
+    padding: 8px 0;
+    font-size: 14px;;
+    line-height: 1; ;
   }
   
   /* Navbar link hover */
@@ -288,13 +288,13 @@
   
     .social-and-quote {
       display: flex;
-      justify-content: flex-start; /* Align items to the left */
-      align-items: center;
+      justify-content: flex-start; 
+      align-items: center
     }
   
     .social-links {
-      margin-right: auto; /* Pushes the social links to the left */
-      margin-left: auto; /* Pushes the social links to the right */
+      margin-right: auto;
+      margin-left: auto;;
     }
   
     .top-header {
@@ -314,7 +314,7 @@
     }
   
     .social-and-quote {
-      justify-content: center; /* Center social links and quote button on smaller screens */
+      justify-content: center; 
       margin-top: 0;
     }
   
@@ -323,8 +323,8 @@
     }
   
     .navigation-links {
-      float: left; /* Align navigation links to the left */
-      margin-right: 0; /* Remove any right margin */
+      float: left;
+      margin-right: 0; ;
     }
   
   }

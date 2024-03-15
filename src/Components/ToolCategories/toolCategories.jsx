@@ -8,28 +8,28 @@ const ToolCategories = () => {
   return (
     <div className="tool-container">
       <h2>Tool for every kind of business</h2>
-      <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus.</p>
+      <p className='cardp'>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus.</p>
 
       <div className="card-container">
         {/* First Card */}
         <div className="card">
           <img src={Card1} alt="Font Library" />
           <h3>Huge font library</h3>
-          <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus quod.</p>
+          <p className='cardp'>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus quod.</p>
         </div>
 
         {/* Second Card */}
         <div className="card">
           <img src={Card2} alt="Documented" />
           <h3>Easy documented</h3>
-          <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus quod.</p>
+          <p className='cardp'>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus quod.</p>
         </div>
 
         {/* Third Card */}
         <div className="card">
           <img src={Card3} alt="Customizable" />
           <h3>Fully customizable</h3>
-          <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus quod.</p>
+          <p className='cardp'>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus quod.</p>
         </div>
       </div>
 
