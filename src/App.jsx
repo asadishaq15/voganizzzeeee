@@ -10,6 +10,7 @@ import Navbar222 from './Components/Navbar/Navbar'
 import Footer from './Components/Footer/footer'
 import HomePage from './pages/Home/homePage'
 import Carousel from './Components/Carousel/carousel'
+import Menu from './pages/Menu/menu';
 
 
 function App() {
@@ -22,7 +23,8 @@ function App() {
             element={
               <>
                 <Header />
-                <HomePage />
+                {/* <HomePage /> */}
+                <Menu/>
                 <Footer />
               </>
             }
