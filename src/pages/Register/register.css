@@ -1,0 +1,128 @@
+/* src/register.css */
+
+.register {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .colored-section,
+  .plain-section {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .colored-section {
+    background-color: #008001;
+    color: white;
+    position: relative;
+    padding-left: 100px;
+  }
+  
+  .logo {
+    width: 180px;
+    height: auto;
+    margin-bottom: 20px;
+    position: absolute;
+    top: 20px;
+    left: 30px;
+  }
+  
+  .quotation {
+    font-size: 40px;
+    margin-bottom: 0;
+  }
+  
+  .h1-register,
+  .h2-register {
+    font-size: 40px;
+  }
+  
+  .plain-section {
+    background-color: #f0f0f0;
+  }
+  
+  .plain-section-content {
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+  }
+  
+  .form-container {
+    margin-top: 20px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .form-group label,
+  input[type='text'],
+  input[type='password'],
+  button {
+    font-size: 18px;
+  }
+  
+  .form-group label {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+    width: 300px;
+  }
+  
+  label {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  
+  .required {
+    color: red;
+  }
+  
+  .green-text {
+    color: #008001;
+  }
+  
+  input[type='text'],
+  input[type='password'],
+  button {
+    padding: 10px;
+    width: 100%;
+    border: none;
+    background-color: rgb(227, 227, 227);
+    border-radius: 5px;
+    margin-top: 5px;
+    font-size: 16px;
+  }
+  
+  input[type='text'],
+  input[type='password'] {
+    background-color: #f9f9f9;
+  }
+  
+  button {
+    background-color: #008001;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #055605;
+  }
+  
+  input[type='checkbox'] {
+    margin-right: 5px;
+    color: #008001;
+  }
+  
+  input[type='checkbox']:checked {
+    background-color: #008001;
+  }
+  

@@ -1,0 +1,63 @@
+/* carousel.css */
+
+.custom-carousel-wrapper {
+    position: relative;
+  }
+  
+  .content {
+    height: 50vh; /* Adjust the height of each slide */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .slide-description {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px; /* Adjust the font size as needed */
+    color: rgb(255, 255, 255); /* Adjust the text color */
+    max-width: 80%; /* Limit the width of the paragraph */
+    margin: 0 auto; /* Center the paragraph horizontally */
+  }
+  
+  /* Media queries for responsiveness */
+  @media screen and (max-width: 768px) {
+    .slide-description {
+      font-size: 20px; /* Adjust font size for smaller screens */
+    }
+  }
+  
+  @media screen and (max-width: 576px) {
+    .slide-description {
+      font-size: 18px; /* Further adjust font size for smaller screens */
+    }
+  }
+  
+
+  /* carousel.css */
+.custom-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.custom-prev-arrow {
+  left: 1rem;
+}
+
+.custom-next-arrow {
+  right: 1rem;
+}
+
+.custom-arrow:hover {
+  color: #ccc;
+}
+
+
