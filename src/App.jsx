@@ -2,6 +2,7 @@ import './App.css'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Register from './pages/Register/register'
+import Login from './pages/Login/login'
 import Header from './Components/Navbar/Navbar'
 import Nav2 from './Components/header/Navbar2'
 import Nav1 from './Components/Navbar/Navbar'
@@ -28,6 +29,7 @@ function App() {
           />
         
           <Route path="/register" element={<Register />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
       </div>
     </Router>

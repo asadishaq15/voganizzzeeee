@@ -1,128 +1,149 @@
-/* src/register.css */
-
 .register {
-    display: flex;
-    height: 100vh;
-  }
-  
-  .colored-section,
-  .plain-section {
-    flex: 1;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  
+  display: flex;
+  height: 100vh;
+  flex-direction: column; /* Stack sections vertically on smaller screens */
+}
+
+.colored-section,
+.plain-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px; /* Add some padding for smaller screens */
+}
+
+.colored-section {
+  background-color: #008001;
+  color: white;
+  position: relative;
+  padding-left: 100px; /* Add some padding for larger screens */
+}
+
+.logo {
+  width: 180px;
+  height: auto;
+  margin-bottom: 20px;
+  position: absolute;
+  top: 20px;
+  left: 30px;
+}
+
+.quotation {
+  font-size: 40px;
+  margin-bottom: 0;
+}
+
+.h1-register,
+.h2-register {
+  font-size: 40px;
+}
+
+.plain-section {
+  background-color: #f0f0f0;
+}
+
+.plain-section-content {
+  margin: 0 auto; /* Center the content horizontally */
+  align-items: center;
+}
+
+.form-container {
+  margin-top: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-group label,
+input[type='text'],
+input[type='password'],
+button {
+  font-size: 18px;
+}
+
+.form-group label {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  width: 100%; /* Make form groups full width on smaller screens */
+  max-width: 300px; /* Set a maximum width for larger screens */
+}
+
+label {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.required {
+  color: red;
+}
+
+.green-text {
+  color: #008001;
+}
+
+input[type='text'],
+input[type='password'],
+button {
+  padding: 10px;
+  width: 100%;
+  border: none;
+  background-color: rgb(227, 227, 227);
+  border-radius: 5px;
+  margin-top: 5px;
+  font-size: 16px;
+}
+
+button {
+  background-color: #008001;
+  color: #fff;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #055605;
+}
+
+input[type='checkbox'] {
+  margin-right: 5px;
+  color: #008001;
+}
+
+input[type='checkbox']:checked {
+  background-color: #008001; /* Change background color to green */
+}
+
+/* Media queries for responsive design */
+
+@media (max-width: 768px) {
   .colored-section {
-    background-color: #008001;
-    color: white;
-    position: relative;
-    padding-left: 100px;
+    padding-left: 20px; /* Reduce padding for smaller screens */
   }
-  
+
   .logo {
-    width: 180px;
-    height: auto;
-    margin-bottom: 20px;
-    position: absolute;
-    top: 20px;
-    left: 30px;
+    position: static; /* Remove absolute positioning for smaller screens */
+    margin-bottom: 10px;
   }
-  
-  .quotation {
-    font-size: 40px;
-    margin-bottom: 0;
-  }
-  
+
   .h1-register,
   .h2-register {
-    font-size: 40px;
+    font-size: 32px;
   }
-  
-  .plain-section {
-    background-color: #f0f0f0;
-  }
-  
-  .plain-section-content {
-    margin-left: auto;
-    margin-right: auto;
-    align-items: center;
-  }
-  
-  .form-container {
-    margin-top: 20px;
-  }
-  
-  form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .form-group label,
-  input[type='text'],
-  input[type='password'],
-  button {
-    font-size: 18px;
-  }
-  
-  .form-group label {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-  }
-  
+
   .form-group {
-    margin-bottom: 20px;
-    width: 300px;
+    width: 100%; /* Make form groups full width on smaller screens */
   }
-  
-  label {
-    font-size: 16px;
-    margin-bottom: 5px;
+}
+
+@media (min-width: 769px) {
+  .register {
+    flex-direction: row; /* Switch to horizontal layout for larger screens */
   }
-  
-  .required {
-    color: red;
-  }
-  
-  .green-text {
-    color: #008001;
-  }
-  
-  input[type='text'],
-  input[type='password'],
-  button {
-    padding: 10px;
-    width: 100%;
-    border: none;
-    background-color: rgb(227, 227, 227);
-    border-radius: 5px;
-    margin-top: 5px;
-    font-size: 16px;
-  }
-  
-  input[type='text'],
-  input[type='password'] {
-    background-color: #f9f9f9;
-  }
-  
-  button {
-    background-color: #008001;
-    color: #fff;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #055605;
-  }
-  
-  input[type='checkbox'] {
-    margin-right: 5px;
-    color: #008001;
-  }
-  
-  input[type='checkbox']:checked {
-    background-color: #008001;
-  }
-  
+}
