@@ -8,6 +8,7 @@ import HomePage from './pages/Home/homePage';
 
 import MainLayout from './Layouts/mainLayout';
 import Menu from './pages/Menu/menu';
+import Recipies from './pages/Recipies/recepies';
 
 
 function App() {
@@ -28,6 +29,14 @@ function App() {
             element={
               <MainLayout>
                 <Menu />
+              </MainLayout>
+            }
+          />
+          <Route
+            path="/recipie"
+            element={
+              <MainLayout>
+                <Recipies />
               </MainLayout>
             }
           />

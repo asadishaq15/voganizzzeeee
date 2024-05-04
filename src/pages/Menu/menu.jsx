@@ -15,6 +15,9 @@ import menu8 from "../../assets/Images/menu-8.webp"
 import menu9 from "../../assets/Images/menu-9.webp"
 import HomeCard from '../../Components/HomeCard/homeCard';
 import Container from '../../Components/whyUs/whyVoganizzee';
+import WhyUs from '../../Components/whyUs/whyVoganizzee';
+import WhyVoganizzee from '../../Components/whyUs/whyVoganizzee';
+import MissionStatement from '../../Components/MissionStatement/missionStatement';
 const cardData = [
     {
       id: 1,
@@ -63,36 +66,7 @@ const cardData = [
     },
   ];
 
-  const slides = [
-    {
-        slideTitle: 'Why We Voganizzzeee',
-        title: 'Video Title', // Add the video title here
-        description: 'Video Description', // Add the video description here
-        image1Src: 'path/to/image2.jpg',
-        image2Src: 'path/to/image3.jpg',
-        card1Title: 'Card 1 Title',
-        card1Description: 'Card 1 Description',
-        card2Title: 'Card 2 Title',
-        card2Description: 'Card 2 Description',
-      },
-      {
-        slideTitle: 'Mission Statement',
-        title1: 'Slide 2 Title 1',
-        title2: 'Slide 2 Title 2',
-        description: 'Slide 2 Description',
-        buttonText: 'Learn More',
-        rightImageSrc: 'path/to/image4.jpg',
-        isButtonVisible: true,
-        buttonLink: '/link2',
-        card1Title: 'Card 3 Title',
-        card1Description: 'Card 3 Description',
-        card2Title: 'Card 4 Title',
-        card2Description: 'Card 4 Description',
-        singlePhotoSrc: 'path/to/singlePhoto.jpg', // Add the path to the single photo
-        rightTitle: 'Right Side Title', // Add the title for the right side
-        rightDescription: 'Right Side Description', // Add the description for the right side
-      },
-]
+  
 const Menu = () => {
   return (
     <div>
@@ -121,7 +95,9 @@ const Menu = () => {
         ))}
       </CardContainer>
       </Wrapper>
-        <Container/>
+      {/* <MissionStatement/> */}
+        <WhyVoganizzee/>
+        
     </div>
   );
 }

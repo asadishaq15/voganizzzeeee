@@ -217,7 +217,7 @@ const InnerCardDescription = styled.p`
   margin-bottom: 10px;
 `;
 
-const Container = () => {
+const WhyVoganizzee = () => {
   return (
     <Wrapper>
     <OuterContainer>
@@ -283,4 +283,4 @@ const Container = () => {
   );
 };
 
-export default Container;
+export default WhyVoganizzee;

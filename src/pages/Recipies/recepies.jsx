@@ -1,0 +1,200 @@
+import React from 'react';
+import headingBackground from "../../assets/Images/menu-bg.webp"
+import styled from 'styled-components';
+
+import chef from "../../assets/Images/chef.webp"
+import PrepTime from "../../assets/Images/prepTime.webp"
+import CookingTime from "../../assets/Images/cookingTime.webp"
+import Ingredients from '../../Components/Ingredients/ingredients';
+
+const Wrapper = styled.div`
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+
+  @media (max-width: 768px) {
+    padding: 10px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 5px;
+  }
+`;
+
+const InnerContainer = styled.div`
+  display: flex;
+  margin-top: 20px;
+  height: auto;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+`;
+
+const LeftHalf = styled.div`
+  flex: 1;
+  display: flex;
+  margin-right: 20px;
+
+  @media (max-width: 768px) {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+`;
+
+const RightHalf = styled.div`
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: 480px) {
+    flex: 1;
+    padding:10px;
+  }
+`;
+
+const CardImage = styled.img`
+  width: auto; /* Set the width to auto to adjust based on height */
+  max-height: 100%; /* Set the maximum height to 100% */
+  object-fit: contain; /* Fit the image inside the container */
+  border-radius: 12px;
+
+  @media (max-width: 480px) {
+    max-width: 100%; /* Set the maximum width to 100% on smaller screens */
+    height: auto; /* Maintain aspect ratio */
+  }
+`;
+
+const RecipeTitle = styled.h3`
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-family: 'Playfair Display', serif;
+
+  @media (max-width: 480px) {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+`;
+
+const RecipeData = styled.div`
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  font-family: 'Playfair Display', serif;
+
+  @media (max-width: 480px) {
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    margin-bottom: 10px;
+  }
+`;
+
+const Separator = styled.span`
+  margin: 0 20px; /* Add margin around the separator */
+  font-size: 25px;
+
+  @media (max-width: 480px) {
+display:none;
+  }
+`;
+
+const RecipeLabel = styled.span`
+  font-size: 25px;
+  margin-right: 8px;
+  margin-left: 12px;
+  font-family: 'Playfair Display', serif;
+
+  @media (max-width: 480px) {
+    font-size: 17px;
+   
+    margin-top: 8px;
+    margin-right: 6px;
+    margin-left: 8px;
+  }
+`;
+
+const Values = styled.span`
+  font-size: 25px;
+  margin-right: 8px;
+  font-family: 'Playfair Display', serif;
+
+  @media (max-width: 480px) {
+    margin-top: 8px;
+    font-size: 17px;
+    margin-right: 6px;
+  }
+`;
+
+const RecipeParagraph = styled.p`
+  margin-top: 5px;
+  font-size: 15px;
+  text-align: justify;
+  font-family: 'Poppins';
+
+  @media (max-width: 480px) {
+    font-size: 14px;
+  }
+`;
+
+const Recipies = () => {
+  return (
+    <div>
+      <div className="blogs-heading-container"
+        style={{
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${headingBackground})`,
+          backgroundPosition: 'center',
+          backgroundSize: 'cover',
+          backgroundAttachment: 'fixed',
+          backgroundRepeat: 'no-repeat',
+          padding: '5%',
+          color: "white"
+        }}
+      >
+        <Title>
+          Recipies
+        </Title>
+      </div>
+      <Wrapper>
+        <InnerContainer>
+          <LeftHalf>
+            <CardImage src={chef} alt="chef" />
+          </LeftHalf>
+          <RightHalf>
+            <RecipeTitle>Recipe Name</RecipeTitle>
+            <RecipeData>
+              <img src={PrepTime} alt="Clock Icon" />
+              <RecipeLabel>Prep Time:</RecipeLabel>
+              <Values>15 Min</Values>
+              <Separator>|</Separator>
+              <img src={CookingTime} alt="Clock Icon" />
+              <RecipeLabel>Cooking Time:</RecipeLabel>
+              <Values>30 Min</Values>
+              <Separator>|</Separator>
+              <img src={CookingTime} alt="Utensils Icon" />
+              <RecipeLabel>Portions:</RecipeLabel>
+              <Values>7</Values>
+            </RecipeData>
+            <RecipeParagraph>
+              Quid ex ea voluptate velit esse, quid est eligendi optio, cumque nihil impedit, quo minus id, de voluptate velit esse, ut de utilitatibus, nihil impedit, quo quaerimus, non quo aut reiciendis voluptatibus maiores alias consequatur
+            </RecipeParagraph>
+          </RightHalf>
+        </InnerContainer>
+      </Wrapper>
+      <Ingredients/>
+    </div>
+  );
+}
+
+export default Recipies;
+
+const Title = styled.h2`
+  font-size: 48px;
+  font-family: 'Playfair Display', serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    font-size: 28px;
+  }
+`;
