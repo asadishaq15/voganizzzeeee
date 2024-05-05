@@ -135,9 +135,9 @@ const ListItem = styled.li`
 
 const CopyButton1 = styled.button`
   position: absolute;
-  top: 14%;
+  top: 8%;
   transform: translateY(-20%);
-  left: 80%;
+  left: 81%;
   display: flex;
   align-items: center;
   padding: 5px 10px;

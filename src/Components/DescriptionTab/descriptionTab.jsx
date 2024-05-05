@@ -2,6 +2,7 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "../../Components/ui/tabs";
 import styled from "styled-components";
 import avar1 from "../../assets/Images/Review1.webp"
+import WriteReviewComponent from "../WriteReview/writeReview";
 
 // Styled components for the tabs and review card
 const TabsContainer = styled.div`
@@ -108,6 +109,7 @@ const CustomTabs = () => {
           </p>
         </TabsContent>
         <TabsContent value="Reviews">
+       
           {reviews.map((review, index) => (
             <ReviewCard key={index}>
               <ReviewHeader>
@@ -133,6 +135,7 @@ const CustomTabs = () => {
               </ReviewDetails>
             </ReviewCard>
           ))}
+           <WriteReviewComponent />
         </TabsContent>
       </Tabs>
     </TabsContainer>
