@@ -3,7 +3,10 @@
   height: 100vh;
   flex-direction: column; /* Stack sections vertically on smaller screens */
 }
-
+.register-heading{
+  font-family: 'Poppins', sans-serif; 
+  font-size: 40px;
+}
 .colored-section,
 .plain-section {
   flex: 1;
@@ -48,6 +51,16 @@
   align-items: center;
 }
 
+.btn-register {
+  background-color: #008001;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
 .form-container {
   margin-top: 20px;
 }
@@ -127,9 +140,8 @@ input[type='checkbox']:checked {
     padding-left: 20px; /* Reduce padding for smaller screens */
   }
 
-  .logo {
-    position: static; /* Remove absolute positioning for smaller screens */
-    margin-bottom: 10px;
+  .colored-section{
+    display: none;
   }
 
   .h1-register,

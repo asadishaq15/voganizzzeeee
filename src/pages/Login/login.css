@@ -4,6 +4,10 @@
   flex-direction: column; /* Stack sections vertically on smaller screens */
 }
 
+.login-heading{
+  font-family: 'Poppins', sans-serif; 
+  font-size: 40px;
+}
 .colored-section,
 .plain-section {
   flex: 1;
@@ -17,16 +21,25 @@
   background-color: #008001;
   color: white;
   position: relative;
-  padding-left: 100px; /* Add some padding for larger screens */
+  padding: 20px; /* Add padding */
 }
-
+.btn-login {
+  background-color: #008001;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
 .logo {
-  width: 180px;
-  height: auto;
-  margin-bottom: 20px;
-  position: absolute;
-  top: 20px;
-  left: 30px;
+  width: 100px; 
+  height: auto; 
+  margin: 10px auto; 
+  position: relative; 
+  top: 0; /* Reset positioning */
+  left: 0; /* Reset positioning */
 }
 
 .quotation {
@@ -120,12 +133,11 @@ input[type='checkbox']:checked {
 
 @media (max-width: 768px) {
   .colored-section {
-    padding-left: 20px; /* Reduce padding for smaller screens */
+    padding: 20px 20px 0; /* Add top padding only for smaller screens */
   }
 
-  .logo {
-    position: static; /* Remove absolute positioning for smaller screens */
-    margin-bottom: 10px;
+  .colored-section{
+    display: none;
   }
 
   .h1-login,

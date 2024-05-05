@@ -1,22 +1,13 @@
 // src/Login.js
 import React from 'react';
 import './login.css';
-import logo from "../../assets/voganizzzeLogo.webp";
+import logo from "../../assets/logo-green.webp";
+import backgroundImage from "../../assets/Images/loginRegisterSidePhoto.webp"
 
 function Login() {
   return (
     <div className="login">
-      <div className="colored-section">
-        <img src={logo} alt="Logo" className="logo" />
-        <p className="quotation">″</p>
-        <div className="text-center">
-          <div className="login-page-title">
-            <h2 className='h1-login'>Welcome</h2>
-            <h2 className='h2-login'>Back!</h2>
-          </div>
-          <p style={{fontSize:"22px", fontWeight:"200"}}>Please login to access your account securely.</p>
-        </div>
-      </div>
+   
       <div className="plain-section">
         <div className="plain-section-content">
         <h2 className="login-heading">Login</h2>
@@ -54,11 +45,13 @@ function Login() {
             <label htmlFor="rememberMe" >Remember Me</label>
             <p style={{color:"#94959B", fontSize:"14px", marginTop:"24px"}}><span className="green-text">Forgot Password?</span></p>
           </div>
-          <button type="submit">Login</button>
+          <button type="submit" className="btn-login">Login</button>
           </div>
         </form>
       </div>
       </div>
+      <div className="colored-section" style={{ backgroundImage: `url(${backgroundImage})` }}>
+  </div>
     </div>
   );
 }
