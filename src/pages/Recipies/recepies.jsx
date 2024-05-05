@@ -5,8 +5,10 @@ import styled from 'styled-components';
 import chef from "../../assets/Images/chef.webp"
 import PrepTime from "../../assets/Images/prepTime.webp"
 import CookingTime from "../../assets/Images/cookingTime.webp"
+import Bookmark from "../../assets/Images/bookmark.webp"
 import Ingredients from '../../Components/Ingredients/ingredients';
 import CustomTabs from '@/Components/DescriptionTab/descriptionTab';
+import { Book } from 'lucide-react';
 
 const Wrapper = styled.div`
   max-width: 1200px;
@@ -136,6 +138,46 @@ const RecipeParagraph = styled.p`
     font-size: 14px;
   }
 `;
+const ButtonContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; /* Adjust margin as needed */
+`;
+
+const RoundButton = styled.button`
+  border-radius: 20px; /* Adjust border-radius as needed */
+  border: solid 1px #749B22;
+  max-width: 150px; /* Adjust max-width as needed */
+  padding: 10px 20px; /* Adjust padding as needed */
+  margin: 0 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: bold;
+  color: #749B22;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add box shadow */
+  transition: all 0.3s ease;
+  outline: none;
+
+  @media (max-width: 768px) {
+    max-width: 100px; /* Adjust max-width for smaller screens */
+    padding: 6px 12px; /* Adjust padding for smaller screens */
+    font-size: 12px; /* Adjust font size for smaller screens */
+    border-radius: 16px;  /* Adjust font size for smaller screens */
+  }
+
+  &:hover {
+    background-color:#71991B;
+    color:#FFFFFF;
+    transform: translateY(-2px); /* Add slight lift effect on hover */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Enhance box shadow on hover */
+  }
+`;
+
+
+
 
 const Recipies = () => {
   return (
@@ -181,7 +223,13 @@ const Recipies = () => {
           </RightHalf>
         </InnerContainer>
       </Wrapper>
+      
       <Ingredients/>
+      <ButtonContainer>
+        <RoundButton>More Recipe</RoundButton>
+        <RoundButton>Print Recipe</RoundButton>
+        <RoundButton><img src={Bookmark} style={{width:"20px", marginRight:"4px"}}></img>Favorite</RoundButton>
+      </ButtonContainer>
     <CustomTabs/>
     </div>
   );

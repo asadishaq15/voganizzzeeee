@@ -2,21 +2,22 @@
 import React from 'react';
 import './register.css'; 
 import logo from "../../assets/voganizzzeLogo.webp";
-
+import backgroundImage from "../../assets/Images/loginRegisterSidePhoto.webp"
 function Register() {
   return (
     <div className="register">
-      <div className="colored-section">
-        <img src={logo} alt="Logo" className="logo" />
-        <p className="quotation">″</p>
-        <div className="text-center">
-          <div className="register-page-title">
-            <h2 className='h1-register'>Welcome to</h2>
-            <h2 className='h2-register'>the VEGANIzZzE</h2>
-          </div>
-          <p style={{fontSize:"22px", fontWeight:"200"}}>Please register to create new account.</p>
-        </div>
-      </div>
+    <div className="colored-section" style={{ backgroundImage: `url(${backgroundImage})` }}>
+  <img src={logo} alt="Logo" className="logo" />
+  <p className="quotation">″</p>
+  <div className="text-center">
+    <div className="register-page-title">
+      <h2 className='h1-register'>Welcome to</h2>
+      <h2 className='h2-register'>the VEGANIzZzE</h2>
+    </div>
+    <p style={{ fontSize: "22px", fontWeight: "200" }}>Please register to create new account.</p>
+  </div>
+</div>
+
       <div className="plain-section">
         <div className="plain-section-content">
           <h2 className="register-heading">Register</h2>
