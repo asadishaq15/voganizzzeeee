@@ -16,12 +16,7 @@
   padding: 20px; /* Add some padding for smaller screens */
 }
 
-.colored-section {
-  background-color: #008001;
-  color: white;
-  position: relative;
-  padding-left: 100px; /* Add some padding for larger screens */
-}
+
 
 .logo {
   width: 180px;
