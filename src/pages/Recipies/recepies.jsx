@@ -6,6 +6,7 @@ import chef from "../../assets/Images/chef.webp"
 import PrepTime from "../../assets/Images/prepTime.webp"
 import CookingTime from "../../assets/Images/cookingTime.webp"
 import Ingredients from '../../Components/Ingredients/ingredients';
+import CustomTabs from '@/Components/DescriptionTab/descriptionTab';
 
 const Wrapper = styled.div`
   max-width: 1200px;
@@ -181,6 +182,7 @@ const Recipies = () => {
         </InnerContainer>
       </Wrapper>
       <Ingredients/>
+    <CustomTabs/>
     </div>
   );
 }
