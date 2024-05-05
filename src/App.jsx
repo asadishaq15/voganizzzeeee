@@ -9,6 +9,7 @@ import HomePage from './pages/Home/homePage';
 import MainLayout from './Layouts/mainLayout';
 import Menu from './pages/Menu/menu';
 import Recipies from './pages/Recipies/recepies';
+import PentryIdeation from './pages/PentryIdeation/pentryIdeation';
 
 
 function App() {
@@ -37,6 +38,14 @@ function App() {
             element={
               <MainLayout>
                 <Recipies />
+              </MainLayout>
+            }
+          />
+          <Route
+            path="/pentry"
+            element={
+              <MainLayout>
+                <PentryIdeation />
               </MainLayout>
             }
           />
