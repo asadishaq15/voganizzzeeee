@@ -10,6 +10,8 @@ import MainLayout from './Layouts/mainLayout';
 import Menu from './pages/Menu/menu';
 import Recipies from './pages/Recipies/recepies';
 import PentryIdeation from './pages/PentryIdeation/pentryIdeation';
+import ShopCard from './Components/ShopCart/shopCard';
+import VoganizzzeShop from './pages/Shop/shop';
 
 
 function App() {
@@ -46,6 +48,14 @@ function App() {
             element={
               <MainLayout>
                 <PentryIdeation />
+              </MainLayout>
+            }
+          />
+          <Route
+            path="/shop"
+            element={
+              <MainLayout>
+             <VoganizzzeShop/>
               </MainLayout>
             }
           />

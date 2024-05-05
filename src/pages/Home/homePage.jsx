@@ -56,7 +56,7 @@ const HomePageContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom:80px;
+  margin-bottom:40px;
   padding: 0 20px; /* Add some horizontal padding */
 `;
 
