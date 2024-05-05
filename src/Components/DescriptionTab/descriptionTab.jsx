@@ -2,7 +2,7 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "../../Components/ui/tabs";
 import styled from "styled-components";
 import avar1 from "../../assets/Images/Review1.webp"
-import avar2 from "../../assets/Images/Review2.webp"
+
 // Styled components for the tabs and review card
 const TabsContainer = styled.div`
   max-width: 1200px;
@@ -88,7 +88,7 @@ const reviews = [
     text: "The product works well, but there are a few areas that could be improved. Overall, it's a decent purchase.",
     reviewer: "Jane Smith",
     date: "April 25, 2023",
-    avatar: avar2,
+    avatar: avar1,
   },
   // Add more review objects as needed
 ];
