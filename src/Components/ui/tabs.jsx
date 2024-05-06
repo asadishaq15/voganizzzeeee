@@ -27,7 +27,6 @@ const TabsTrigger = React.forwardRef(({ className, ...props }, ref) => (
     {...props} />
 ))
 TabsTrigger.displayName = TabsPrimitive.Trigger.displayName
-
 const TabsContent = React.forwardRef(({ className, ...props }, ref) => (
   <TabsPrimitive.Content
     ref={ref}
@@ -35,7 +34,9 @@ const TabsContent = React.forwardRef(({ className, ...props }, ref) => (
       "mt-2 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
       className
     )}
-    {...props} />
+    style={{ minHeight: 0, height: "auto" }} // Add this line
+    {...props}
+  />
 ))
 TabsContent.displayName = TabsPrimitive.Content.displayName
 

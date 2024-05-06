@@ -2,22 +2,19 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "../../Components/ui/tabs";
 import styled from "styled-components";
 import avar1 from "../../assets/Images/Review1.webp"
-import p1 from "../../assets/Images/Review1.webp"
-import p2 from "../../assets/Images/Review1.webp"
-import p3 from "../../assets/Images/Review1.webp"
+
 
 // Styled components for the tabs and review card
 const TabsContainer = styled.div`
   padding: 20px;
   background-color: #fff;
   border-radius: 8px;
-  max-width:1200px;
+  max-width: 1200px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px; // Add margin-bottom to create space between the card and tabs
 `;
 const TabsWrapper = styled.div`
-  max-width: 1300px; // Set a maximum width
-  margin: 0 auto; // Center the tabs
+  max-width: 1300px; 
+  margin: 0 auto; 
 `;
 
 const ReviewCard = styled.div`
@@ -29,6 +26,7 @@ const ReviewCard = styled.div`
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
 `;
+
 
 const ReviewHeader = styled.div`
   display: flex;
@@ -104,26 +102,6 @@ const DescriptionImage = styled.img`
   }
 `;
 
-// Review data
-const reviews = [
-  {
-    rating: 4,
-    title: "Great Product!",
-    text: "I recently purchased this product, and I'm thoroughly impressed with its performance. It exceeded my expectations in terms of quality and functionality.",
-    reviewer: "John Doe",
-    date: "May 1, 2023",
-    avatar: avar1
-  },
-  {
-    rating: 3,
-    title: "Good but could be better",
-    text: "The product works well, but there are a few areas that could be improved. Overall, it's a decent purchase.",
-    reviewer: "Jane Smith",
-    date: "April 25, 2023",
-    avatar: avar1,
-  },
-  
-];
 
 // CustomTabs component
 const ProductDescriptionTabs = ({ descriptionTab, reviews ,descriptionImages}) =>{
@@ -135,7 +113,7 @@ const ProductDescriptionTabs = ({ descriptionTab, reviews ,descriptionImages}) =
           <TabsTrigger value="Description" >Description</TabsTrigger>
           <TabsTrigger value="Reviews">Reviews</TabsTrigger>
         </TabsList>
-        <TabsContent value="Description">
+        <TabsContent value="Description" >
             <p>{descriptionTab}</p>
             {descriptionImages && (
               <DescriptionImages>
@@ -145,7 +123,12 @@ const ProductDescriptionTabs = ({ descriptionTab, reviews ,descriptionImages}) =
               </DescriptionImages>
             )}
             </TabsContent>
-        <TabsContent value="Reviews">
+            <TabsContent value="Reviews"  style={{
+    maxHeight: "200px", // Adjust this value as per your requirements
+    overflowY: "auto",
+    padding: "10px", // Add some padding for better visibility
+    boxSizing: "border-box", // Include padding in the maximum height calculation
+  }}>
        
           {reviews.map((review, index) => (
             <ReviewCard key={index}>

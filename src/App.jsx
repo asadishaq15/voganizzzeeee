@@ -14,6 +14,8 @@ import VoganizzzeShop from './pages/Shop/shop';
 import Beauty from './pages/Beauty/beauty';
 import HouseHold from './pages/HouseHold/houseHold';
 import Travel from './pages/Travel/travel';
+import { Restaurant } from '@mui/icons-material';
+import Restaurants from './pages/Restaurants/restaurants';
 
 
 function App() {
@@ -82,6 +84,14 @@ function App() {
             element={
               <MainLayout>
              <Travel/>
+              </MainLayout>
+            }
+          />
+          <Route
+            path="/restaurants"
+            element={
+              <MainLayout>
+             <Restaurants/>
               </MainLayout>
             }
           />
