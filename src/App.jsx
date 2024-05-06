@@ -19,6 +19,7 @@ import Restaurants from './pages/Restaurants/restaurants';
 import FoodShops from './pages/FoodShops/foodShops';
 import Cosmetics from './pages/Cosmetics/cosmetics';
 import MyProfile from './pages/ProfilePage/profile';
+import TravelCards from './pages/TravelCards/travelCards';
 
 
 function App() {
@@ -119,6 +120,14 @@ function App() {
             element={
               <MainLayout>
              <MyProfile/>
+              </MainLayout>
+            }
+          />
+          <Route
+            path="/travelcards"
+            element={
+              <MainLayout>
+             <TravelCards/>
               </MainLayout>
             }
           />
