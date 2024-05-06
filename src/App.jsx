@@ -16,6 +16,7 @@ import HouseHold from './pages/HouseHold/houseHold';
 import Travel from './pages/Travel/travel';
 import { Restaurant } from '@mui/icons-material';
 import Restaurants from './pages/Restaurants/restaurants';
+import FoodShops from './pages/FoodShops/foodShops';
 
 
 function App() {
@@ -92,6 +93,14 @@ function App() {
             element={
               <MainLayout>
              <Restaurants/>
+              </MainLayout>
+            }
+          />
+          <Route
+            path="/foodshops"
+            element={
+              <MainLayout>
+             <FoodShops/>
               </MainLayout>
             }
           />
