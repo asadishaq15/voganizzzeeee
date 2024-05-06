@@ -18,6 +18,7 @@ import { Restaurant } from '@mui/icons-material';
 import Restaurants from './pages/Restaurants/restaurants';
 import FoodShops from './pages/FoodShops/foodShops';
 import Cosmetics from './pages/Cosmetics/cosmetics';
+import MyProfile from './pages/ProfilePage/profile';
 
 
 function App() {
@@ -110,6 +111,14 @@ function App() {
             element={
               <MainLayout>
              <Cosmetics/>
+              </MainLayout>
+            }
+          />
+          <Route
+            path="/myprofile"
+            element={
+              <MainLayout>
+             <MyProfile/>
               </MainLayout>
             }
           />
