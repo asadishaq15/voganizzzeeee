@@ -2,7 +2,6 @@
 
 import React from 'react';
 import headingBackground from "../../assets/Images/menu-bg.webp"
-import "./menu.css"
 import styled from 'styled-components';
 import menu1 from "../../assets/Images/menu-1.webp"
 import menu2 from "../../assets/Images/menu-2.webp"

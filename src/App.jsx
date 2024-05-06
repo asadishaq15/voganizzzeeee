@@ -12,6 +12,7 @@ import Recipies from './pages/Recipies/recepies';
 import PentryIdeation from './pages/PentryIdeation/pentryIdeation';
 import ShopCard from './Components/ShopCart/shopCard';
 import VoganizzzeShop from './pages/Shop/shop';
+import Beauty from './pages/Beauty/beauty';
 
 
 function App() {
@@ -56,6 +57,14 @@ function App() {
             element={
               <MainLayout>
              <VoganizzzeShop/>
+              </MainLayout>
+            }
+          />
+          <Route
+            path="/beauty"
+            element={
+              <MainLayout>
+             <Beauty/>
               </MainLayout>
             }
           />
