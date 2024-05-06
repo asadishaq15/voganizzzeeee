@@ -1,9 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import headingBackground from '../../assets/Images/BeautyPageBg.webp';
-import BeautyCard1 from '../../assets/Images/BeautyCard1.webp';
-import BeautyCard2 from '../../assets/Images/BeautyCard2.webp';
-import BeautyCard3 from '../../assets/Images/BeautyCard3.webp';
+import houseHold from '../../assets/Images/HouseHold2.webp';
+
 
 const Title = styled.h2`
   font-size: 48px;
@@ -69,7 +68,8 @@ const ContentItem = styled.div`
   width: 100%; 
   padding:10px;
   h3 {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+    font-family: 'Ubuntu', sans-serif; 
     margin-bottom: 0.5rem;
   }
 
@@ -95,35 +95,18 @@ margin-right:10px
 `
 const data = [
   {
-    image: BeautyCard1,
-    title1: 'Fragrances',
+    image: houseHold,
+    title1: 'Cleaning',
     brandName: 'Brand Name',
     location: 'New York United States',
     description1: 'Lorem ipsum dolor sit amet consectetur. Amet quis velit proin fermentum. Commodo et imperdiet fringilla et tristique. Nisi mauris natoque viverra euismod arcu nisl tellus cras massa. Netus dictum sed diam mauris praesent.',
     title2: 'Description',
     description2: 'Lorem ipsum dolor sit amet consectetur. Ultricies vestibulum gravida sed amet eget orci aliquet faucibus volutpat. Quis non habitasse mauris dui. Sagittis odio dui facilisi diam tristique posuere tellus gravida nulla. Nunc montes aliquam dolor massa libero sed ut. Sollicitudin aliquet turpis Lorem ipsum dolor sit amet consectetur. Ultricies vestibulum gravida sed amet eget orci aliquet faucibus volutpat. Quis non habitasse mauris dui. Sagittis odio dui facilisi diam tristique posuere tellus gravida nulla. Nunc montes aliquam dolor massa libero sed ut. Sollicitudin aliquet turpis.',
   },
-  {
-    image: BeautyCard2,
-    title1: 'Make_up',
-    brandName: 'Brand Name',
-    location: 'New York United States',
-    description1: 'Lorem ipsum dolor sit amet consectetur. Amet quis velit proin fermentum. Commodo et imperdiet fringilla et tristique. Nisi mauris natoque viverra euismod arcu nisl tellus cras massa. Netus dictum sed diam mauris praesent.',
-    title2: 'Description',
-    description2: 'Lorem ipsum dolor sit amet consectetur. Ultricies vestibulum gravida sed amet eget orci aliquet faucibus volutpat. Quis non habitasse mauris dui. Sagittis odio dui facilisi diam tristique posuere tellus gravida nulla. Nunc montes aliquam dolor massa libero sed ut. Sollicitudin aliquet turpis.Lorem ipsum dolor sit amet consectetur. Ultricies vestibulum gravida sed amet eget orci aliquet faucibus volutpat. Quis non habitasse mauris dui. Sagittis odio dui facilisi diam tristique posuere tellus gravida nulla. Nunc montes aliquam dolor massa libero sed ut. Sollicitudin aliquet turpis.',
-  },
-  {
-    image: BeautyCard3,
-    title1: 'Skin Care',
-    brandName: 'Brand Name',
-    location: 'New York United States',
-    description1: 'Lorem ipsum dolor sit amet consectetur. Amet quis velit proin fermentum. Commodo et imperdiet fringilla et tristique. Nisi mauris natoque viverra euismod arcu nisl tellus cras massa. Netus dictum sed diam mauris praesent.',
-    title2: 'Description',
-    description2: 'Lorem ipsum dolor sit amet consectetur. Ultricies vestibulum gravida sed amet eget orci aliquet faucibus volutpat. Quis non habitasse mauris dui. Sagittis odio dui facilisi diam tristique posuere tellus gravida nulla. Nunc montes aliquam dolor massa libero sed ut. Sollicitudin aliquet turpis Lorem ipsum dolor sit amet consectetur. Ultricies vestibulum gravida sed amet eget orci aliquet faucibus volutpat. Quis non habitasse mauris dui. Sagittis odio dui facilisi diam tristique posuere tellus gravida nulla. Nunc montes aliquam dolor massa libero sed ut. Sollicitudin aliquet turpis.',
-  },
+  
 ];
 
-const Beauty = () => {
+const HouseHold = () => {
   return (
     <div>
       <div
@@ -138,7 +121,7 @@ const Beauty = () => {
           color: 'white',
         }}
       >
-        <Title>Beauty</Title>
+        <Title>Household</Title>
       </div>
       <CardContainer>
         {data.map((item, index) => (
@@ -167,4 +150,4 @@ const Beauty = () => {
   );
 };
 
-export default Beauty;
+export default HouseHold;

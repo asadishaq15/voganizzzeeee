@@ -13,6 +13,7 @@ import PentryIdeation from './pages/PentryIdeation/pentryIdeation';
 import ShopCard from './Components/ShopCart/shopCard';
 import VoganizzzeShop from './pages/Shop/shop';
 import Beauty from './pages/Beauty/beauty';
+import HouseHold from './pages/HouseHold/houseHold';
 
 
 function App() {
@@ -65,6 +66,14 @@ function App() {
             element={
               <MainLayout>
              <Beauty/>
+              </MainLayout>
+            }
+          />
+          <Route
+            path="/household"
+            element={
+              <MainLayout>
+             <HouseHold/>
               </MainLayout>
             }
           />
