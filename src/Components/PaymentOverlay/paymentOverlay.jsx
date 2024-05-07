@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import paymentIcon1 from '../../assets/Images/method1.webp';
 import paymentIcon2 from '../../assets/Images/method2.webp';
@@ -16,7 +16,6 @@ const OverlayContainer = styled.div`
   align-items: center;
   z-index: 1000;
 `;
-
 const OverlayContent = styled.div`
   background-color: #fff;
   border-radius: 8px;
@@ -24,7 +23,9 @@ const OverlayContent = styled.div`
   max-width: 800px;
   width: 100%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  position: relative;
 `;
+
 
 const ProductsContainer = styled.div`
   display: flex;
@@ -104,7 +105,7 @@ const PriceDetailValue = styled.span`
 
 const PaymentOptionsContainer = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: center; 
   margin-bottom: 20px;
 `;
 
@@ -112,6 +113,7 @@ const PaymentOption = styled.div`
   display: flex;
   align-items: center;
   cursor: pointer;
+  margin: 0 10px; 
 `;
 
 const PaymentIcon = styled.img`
@@ -150,7 +152,29 @@ const SubmitButton = styled.button`
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
+  width: auto; 
 `;
+const CloseButton = styled.button`
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  align-items:right;
+  background-color: none;
+  border: none;
+  width:auto;
+  font-size: 20px;
+  color: #888; // Changed the color to a lighter gray
+  cursor: pointer;
+  transition: color 0.3s ease; // Added transition for hover effect
+
+  &:hover {
+    background-color: transparent;
+    color: #333; // Changed the color on hover to a darker gray
+  }
+`;
+
+
+
 
 const PaymentOverlay = ({ onClose, product }) => {
   const [quantity, setQuantity] = useState(1);
@@ -159,7 +183,10 @@ const PaymentOverlay = ({ onClose, product }) => {
   const [sameAsBilling, setSameAsBilling] = useState(true);
 
   const handleQuantityChange = (value) => {
-    setQuantity(quantity + value);
+    const newQuantity = quantity + value;
+    if (newQuantity >= 0) { 
+      setQuantity(newQuantity);
+    }
   };
 
   const handleBillingAddressChange = (event) => {
@@ -187,10 +214,25 @@ const PaymentOverlay = ({ onClose, product }) => {
     console.log('Payment submitted!');
     onClose();
   };
+  const handleOutsideClick = (event) => {
+    if (!event.target.closest('OverlayContent')) {
+      onClose();
+    }
+  };
+  
+  useEffect(() => {
+    document.addEventListener('mousedown', handleOutsideClick);
+  
+    return () => {
+      document.removeEventListener('mousedown', handleOutsideClick);
+    };
+  }, [onClose]);
 
   return (
     <OverlayContainer>
+        
       <OverlayContent>
+      <CloseButton onClick={onClose}>×</CloseButton>
         <ProductsContainer>
           <ProductCard>
             <ProductImage src={product.image} alt={product.title} />
