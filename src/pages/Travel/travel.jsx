@@ -29,10 +29,10 @@ const SectionHeading = styled.div`
   margin-top: 80px;
 
   h3 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     margin: 0;
+    font-weight:bold;
   }
-
   button {
     display: none; /* Hide the button on smaller screens */
     color: #0f3460;
@@ -42,12 +42,13 @@ const SectionHeading = styled.div`
     cursor: pointer;
     width: auto;
     transition: background-color 0.3s ease;
-
+  
     &:hover {
-      background-color: #555;
+      background-color: #0f3460; /* Add a suitable hover background color */
+      color: #fff; /* Change text color on hover */
     }
   }
-
+  
   @media (min-width: 768px) {
     button {
       display: block; /* Display the button on larger screens */
@@ -80,6 +81,7 @@ const CardWrapper = styled.div`
 const ImageContainer = styled.div`
   height: 200px;
   overflow: hidden;
+  padding: 1rem; /* Add padding for mobile screens */
 
   img {
     width: 100%;
@@ -91,7 +93,12 @@ const ImageContainer = styled.div`
   ${CardWrapper}:hover & img {
     transform: scale(1.1);
   }
+
+  @media (min-width: 768px) {
+    padding: 0; /* Reset padding for larger screens */
+  }
 `;
+
 
 const CardTitle = styled.div`
   position: absolute;

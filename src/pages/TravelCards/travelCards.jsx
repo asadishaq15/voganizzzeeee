@@ -128,7 +128,7 @@ const FavoritesTitle = styled.h3`
 const RecipesContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
+  grid-gap: 40px;
 
   @media (max-width: 768px) {
     grid-template-columns: repeat(2, 1fr);
@@ -140,11 +140,28 @@ const RecipesContainer = styled.div`
 `;
 
 const RecipeCard = styled.div`
+  position: relative; /* Add position relative to enable absolute positioning of the hover border */
   background-color: white;
   border-radius: 8px;
+  padding: 20px !important;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+
+  /* Define the default border color and width */
+  border: 2px solid transparent;
+
+  /* Transition for smooth hover effect */
+  transition: border-color 0.3s ease;
+
+  /* Add hover effect */
+  &:hover {
+    border-color: #4caf50; 
+  }
+
+ 
+  z-index: 1;
 `;
+
 
 const RecipeImage = styled.img`
   width: 100%;

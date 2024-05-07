@@ -45,20 +45,25 @@ const CardWrapper = styled.div`
 const ImageContainer = styled.div`
   flex: 1;
   height: auto;
+  padding: 1rem; 
 
   img {
     width: 100%;
-    height: 100%; /* Set image height to 100% of its container */
+    height: 100%; 
     object-fit: cover;
+  }
+
+  @media (min-width: 768px) {
+    padding: 0; 
   }
 `;
 
 const ContentContainer = styled.div`
   flex: 2;
-
+  padding: 1rem; 
 
   @media (min-width: 768px) {
-    padding: 2rem;
+    padding: 1rem; 
   }
 `;
 
@@ -69,8 +74,9 @@ const ContentItem = styled.div`
   width: 100%; 
   padding:10px;
   h3 {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     margin-bottom: 0.5rem;
+    font-weight:bold;
   }
 
   .brand-location {

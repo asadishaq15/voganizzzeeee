@@ -65,6 +65,8 @@ background-color: #f5fce4;
   }
 
   @media (max-width: 480px) {
+    padding: 15px;
+    border-radius: 20px;
     padding: 10px;
   }
 `;

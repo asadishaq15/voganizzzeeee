@@ -15,13 +15,17 @@ export default HomeCard;
 const CardWrapper = styled.div`
   width: 250px;
   margin: 20px;
-  border: 1px solid #ccc;
+  border: 2px solid #ccc; 
   border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  transition: border-color 0.3s ease; /* Add transition effect for border color */
+
+  &:hover {
+    border-color: #B8EA9B; /* Change border color on hover */
+  }
 
   @media (max-width: 768px) {
-    max width: 100%; /* Adjust width for smaller screens */
+    max-width: 100%; /* Adjust width for smaller screens */
     margin: 20px auto; /* Center the card horizontally */
   }
 `;

@@ -7,7 +7,7 @@ const Wrapper = styled.div`
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
-  width: 100%; /* Set width to 100% for full screen width */
+  width: 100%; 
 
   @media (max-width: 768px) {
     padding: 10px;
@@ -15,11 +15,10 @@ const Wrapper = styled.div`
 `;
 
 const WriteReviewContainer = styled.div`
-  background-color: white;
+background-color: #f8f8f8;
   padding: 20px;
   max-width:800px;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
   margin: 0 auto;
 
@@ -94,7 +93,7 @@ const SubmitButton = styled.button`
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  width: auto; /* Adjust width to fit the text */
+  width: auto; 
 
   &:hover {
     background-color: #5f7f18;
