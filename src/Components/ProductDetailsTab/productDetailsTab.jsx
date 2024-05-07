@@ -1,10 +1,7 @@
-// Import necessary libraries and components
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "../../Components/ui/tabs";
 import styled from "styled-components";
-import avar1 from "../../assets/Images/Review1.webp"
+import avar1 from "../../assets/Images/Review1.webp";
 
-
-// Styled components for the tabs and review card
 const TabsContainer = styled.div`
   padding: 20px;
   background-color: #fff;
@@ -12,6 +9,7 @@ const TabsContainer = styled.div`
   max-width: 1200px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 `;
+
 const TabsWrapper = styled.div`
   max-width: 1300px; 
   margin: 0 auto; 
@@ -26,7 +24,6 @@ const ReviewCard = styled.div`
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
 `;
-
 
 const ReviewHeader = styled.div`
   display: flex;
@@ -59,8 +56,6 @@ const Star = styled.span`
   font-size: 18px;
 `;
 
-
-
 const Title = styled.h4`
   margin: 0;
   font-size: 16px;
@@ -81,6 +76,7 @@ const ReviewDetails = styled.div`
 const Reviewer = styled.span`
   margin-right: 8px;
 `;
+
 const DescriptionImages = styled.div`
   display: flex;
   gap: 40px;
@@ -102,16 +98,32 @@ const DescriptionImage = styled.img`
   }
 `;
 
-
 // CustomTabs component
+const TabsTriggerStyled = styled(TabsTrigger)`
+  &:hover {
+    background-color: #71991B;
+    color: white;
+  }
+`;
+
 const ProductDescriptionTabs = ({ descriptionTab, reviews ,descriptionImages}) =>{
   return (
     <TabsContainer>
          <TabsWrapper>
       <Tabs defaultValue="Description" className="w-full">
         <TabsList>
-          <TabsTrigger value="Description" >Description</TabsTrigger>
-          <TabsTrigger value="Reviews">Reviews</TabsTrigger>
+          <TabsTriggerStyled value="Description" style={{ 
+                ":hover": { 
+                backgroundColor: "#71991B",
+                color: "white"
+                }
+            }} >Description</TabsTriggerStyled>
+          <TabsTriggerStyled value="Reviews"  style={{ 
+                ":hover": { 
+                backgroundColor: "#71991B",
+                color: "white"
+                }
+            }}>Reviews</TabsTriggerStyled>
         </TabsList>
         <TabsContent value="Description" >
             <p>{descriptionTab}</p>

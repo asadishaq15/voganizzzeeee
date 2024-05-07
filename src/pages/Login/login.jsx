@@ -6,6 +6,7 @@ import backgroundImage from "../../assets/Images/loginRegisterSidePhoto.webp"
 
 function Login() {
   return (
+    <div className="login-container">
     <div className="login">
    
       <div className="plain-section">
@@ -52,6 +53,7 @@ function Login() {
       </div>
       <div className="colored-section" style={{ backgroundImage: `url(${backgroundImage})` }}>
   </div>
+    </div>
     </div>
   );
 }

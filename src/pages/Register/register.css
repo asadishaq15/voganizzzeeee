@@ -3,10 +3,12 @@
   height: 100vh;
   flex-direction: column; /* Stack sections vertically on smaller screens */
 }
-.register-heading{
-  font-family: 'Poppins', sans-serif; 
+
+.register-heading {
+  font-family: 'Poppins', sans-serif;
   font-size: 40px;
 }
+
 .colored-section,
 .plain-section {
   flex: 1;
@@ -16,7 +18,16 @@
   padding: 20px; /* Add some padding for smaller screens */
 }
 
-
+.btn-register {
+  background-color: #008001;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
 
 .logo {
   width: 180px;
@@ -46,16 +57,6 @@
   align-items: center;
 }
 
-.btn-register {
-  background-color: #008001;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
 .form-container {
   margin-top: 20px;
 }
@@ -103,7 +104,7 @@ button {
   padding: 10px;
   width: 100%;
   border: none;
-  background-color: rgb(227, 227, 227);
+  background-color: transparent;
   border-radius: 5px;
   margin-top: 5px;
   font-size: 16px;
@@ -135,7 +136,7 @@ input[type='checkbox']:checked {
     padding-left: 20px; /* Reduce padding for smaller screens */
   }
 
-  .colored-section{
+  .colored-section {
     display: none;
   }
 

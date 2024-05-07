@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import whatsAppIcon from "../../assets/whatsapp.webp"
 import FacebookIcon from "../../assets/facbook.webp"
@@ -84,10 +85,10 @@ const Footer = () => {
         </LeftHalf>
         <RightHalf>
           <IconContainer>
-            <Icon src={whatsAppIcon} alt="WhatsApp" />
-            <Icon src={FacebookIcon} alt="Facebook" />
-            <Icon src={InstagramIcon} alt="Instagram" />
-            <Icon src={LinkedInIcon} alt="LinkedIn" />
+          <Link to="/whatsapp"><Icon src={whatsAppIcon} alt="WhatsApp" /></Link>
+          <Link to="/facebook"><Icon src={FacebookIcon} alt="Facebook" /></Link>
+          <Link to="/instagram"><Icon src={InstagramIcon} alt="Instagram" /></Link>
+          <Link to="/linkedin"><Icon src={LinkedInIcon} alt="LinkedIn" /></Link>
           </IconContainer>
         </RightHalf>
       </InnerContainer>

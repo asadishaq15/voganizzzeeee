@@ -29,7 +29,7 @@ const HeaderContainer = styled.header`
   z-index: 10;
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  height: 120px;
+  height: 100px;
   display: flex;
   align-items: center;
   padding: 0 1rem;
@@ -105,8 +105,8 @@ const NavLink = styled(Link)`
 const ToggleButton = styled.div`
   position: relative;
   width: 50px;
-  height: 25px;
-  background-color: #white;
+  height: 30px;
+  background-color: white;
   border: solid 2px #008001;
   border-radius: 15px;
   margin-left: 1rem;
@@ -116,51 +116,51 @@ const ToggleButton = styled.div`
 
 const ToggleSlider = styled.div`
   position: absolute;
-  top: 3px;
-  left:2px;
-  left: ${({ theme }) => (theme === 'light' ? '2px' : 'calc(100% - 30px)')};
-  width: 12px;
-  height: 12px;
-  border: 4px solid #008001; /* Border color for the hollow slider */
+  top: 2px;
+  left: ${({ sliderPosition }) => (sliderPosition === 'left' ? '2px' : 'calc(55% - 26px)')};
+  width: 22px;
+  height: 22px;
+  background-color: #008001;
   border-radius: 50%;
-  transition: transform 0.3s ease;
-  transform: ${({ theme }) => (theme === 'light' ? 'translateX(0)' : 'translateX(-26px)')};
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(${({ sliderPosition }) => (sliderPosition === 'left' ? '0' : '22px')});
 `;
-
 
 const SearchContainer = styled.div`
   display: flex;
   align-items: center;
   width: 350px;
-  height: 35px;
+  height: 53px;
   border: 2px solid #008001;
   border-radius: 25px;
   padding: 5px;
   background-color: hsl(120, 50%, 95%);
-  cursor: text; /* Add cursor pointer on hover */
+  cursor: text;
 `;
-
 const SearchInput = styled.input`
   flex: 1;
   border: none;
   outline: none;
-  width: calc(100% - 30px); /* Adjust width of input */
-  padding: 5px; /* match container padding */
-  font-size: 16px; /* Adjust font size as needed */
-  color: #333; /* Text color */
-  background-color: #f0f0f0; /* Same background color as the container */
-  border-radius: 20px; /* Adjust border radius as needed */
+  width: calc(100% - 20px);
+  padding: 5px;
+  top: 30px;
+  font-size: 16px;
+  color: #333;
+  background-color: transparent;
+  border-radius: 20px;
 
   &::placeholder {
-    color: black; 
+    color: black;
   }
 
   &:focus {
-    background-color: #ffffff; /* Change background color when input is focused */
+    background-color: transparent;
   }
 `;
+
+
 const SearchIcon = styled(FaSearch)`
-  color: black; /* Green color */
+  color: black; 
 
   margin-left:8px;
 `;
@@ -170,10 +170,10 @@ margin-left:10px;
 `;
 
 const ShopButton = styled.button`
-  height: 50px;
+height: 48px;
   padding: 0 1rem;
-  width:170px;
-  background-color: #333;
+  width:160px;
+  background-color: #000000;
   color: #fff;
   border: none;
   border-radius: 34px;
@@ -181,7 +181,7 @@ const ShopButton = styled.button`
   cursor: pointer;
 
   &:hover {
-    background-color: #666;
+    background-color: #333333; 
   }
 `;
 
@@ -230,17 +230,22 @@ const Navbar222 = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [query, setQuery] = useState('');
   const [theme, setTheme] = useState('light');
+  const [sliderPosition, setSliderPosition] = useState('left');
+
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
-  const toggleTheme = () => {
-    setTheme(theme === 'light' ? 'dark' : 'light');
+
+  const toggleSlider = () => {
+    setSliderPosition(sliderPosition === 'left' ? 'right' : 'left');
   };
+
   const handleOutsideClick = (event) => {
     if (!event.target.closest('header')) {
       setIsOpen(false);
     }
   };
+
   const handleInputChange = (event) => {
     setQuery(event.target.value);
   };
@@ -248,6 +253,7 @@ const Navbar222 = () => {
   const handleScroll = () => {
     setIsOpen(false);
   };
+
   const handleSearch = () => {
     // Implement search functionality
     console.log('Searching for:', query);
@@ -265,20 +271,25 @@ const Navbar222 = () => {
 
   return (
     <>
-         <GlobalStyle theme={themes[theme]} />
+      <GlobalStyle theme={themes[theme]} />
       <HeaderContainer>
         <Link to="/">
           <Logo src={logoGreen} alt="Logo" />
         </Link>
         <NavWrapper>
           <NavLinks>
-            <SearchContainer >
+            <SearchContainer>
               <SearchIcon />
-              <SearchText>Search</SearchText>
+              <SearchInput
+                type="text"
+                placeholder="Search"
+                value={query}
+                onChange={handleInputChange}
+              />
             </SearchContainer>
             <ShopButton>Shop</ShopButton>
-            <ToggleButton>
-              <ToggleSlider theme={theme} />
+            <ToggleButton onClick={toggleSlider}>
+              <ToggleSlider sliderPosition={sliderPosition} />
             </ToggleButton>
             <ProfileIcon src={sampleProfile} alt="Profile" />
           </NavLinks>
@@ -300,8 +311,7 @@ const Navbar222 = () => {
           ))}
         </DropdownMenu>
       </HeaderContainer>
-
-  </>
+    </>
   );
 };
 

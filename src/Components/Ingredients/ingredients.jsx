@@ -54,7 +54,7 @@ const Title = styled.h3`
 `;
 
 const IngredientsList = styled.ul`
-  background-color: #f5fce4;
+background-color: #f5fce4;
   list-style-type: none;
   columns: 2;
   

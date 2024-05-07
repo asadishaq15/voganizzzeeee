@@ -5,6 +5,7 @@ import logo from "../../assets/logo-green.webp";
 import backgroundImage from "../../assets/Images/loginRegisterSidePhoto.webp"
 function Register() {
   return (
+    <div className="register-container">
     <div className="register">
       <div className="plain-section">
         <div className="plain-section-content">
@@ -72,6 +73,7 @@ function Register() {
       </div>
           <div className="colored-section" style={{ backgroundImage: `url(${backgroundImage})` }}>
 
+    </div>
     </div>
     </div>
   );

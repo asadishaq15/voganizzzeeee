@@ -95,7 +95,7 @@ const Menu = () => {
       </CardContainer>
       </Wrapper>
       {/* <MissionStatement/> */}
-        <WhyVoganizzee/>
+        
         
     </div>
   );

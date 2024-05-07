@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import ProductDescriptionTabs from '../ProductDetailsTab/productDetailsTab';
+import PaymentOverlay from '../PaymentOverlay/paymentOverlay';
 
 const CardContainer = styled.div`
   display: flex;
@@ -96,8 +97,10 @@ const AddToCartButton = styled.button`
   transition: background-color 0.3s ease;
   width: auto; /* Adjust width automatically based on content */
 
-  &:hover {
-    background-color: #e65c4f;
+
+    &:hover {
+        background-color: #BB5649;
+      }
   }
 `;
 
@@ -121,30 +124,50 @@ const renderStars = (rating) => {
     return stars;
   };
 
-  const ShopCard = ({ image, title, rating, reviewCount, description , descriptionTab,  reviews,descriptionImages }) => {
+  const ShopCard = ({ image, title, rating, reviewCount, description, descriptionTab, reviews, descriptionImages }) => {
+    const [showPaymentOverlay, setShowPaymentOverlay] = useState(false);
+  
+    const handleAddToCart = () => {
+      setShowPaymentOverlay(true);
+    };
+  
+    const handleCloseOverlay = () => {
+      setShowPaymentOverlay(false);
+    };
+  
     return (
-        <>
-   
-      <CardContainer>
-        <ImageContainer>
-          <Image src={image} alt={title} />
-        </ImageContainer>
-        <ContentContainer>
-          <Title>{title}</Title>
-          <Rating>
-            {/* Render stars */}
-            {renderStars(rating)}
-            <RatingText>{rating}</RatingText>
-            <ReviewCount>({reviewCount} reviews)</ReviewCount>
-          </Rating>
-          <Description>{description}</Description>
-          <AddToCartButton>Add to Cart</AddToCartButton>
-        </ContentContainer>
-      </CardContainer>
-          <ProductDescriptionTabs descriptionTab={descriptionTab}
-           reviews={reviews}
-           descriptionImages={descriptionImages} />
-          
+      <>
+        <CardContainer>
+          <ImageContainer>
+            <Image src={image} alt={title} />
+          </ImageContainer>
+          <ContentContainer>
+            <Title>{title}</Title>
+            <Rating>
+              {/* Render stars */}
+              {renderStars(rating)}
+              <RatingText>{rating}</RatingText>
+              <ReviewCount>({reviewCount} reviews)</ReviewCount>
+            </Rating>
+            <Description>{description}</Description>
+            <AddToCartButton onClick={handleAddToCart}>Add to Cart</AddToCartButton>
+          </ContentContainer>
+        </CardContainer>
+        <ProductDescriptionTabs
+          descriptionTab={descriptionTab}
+          reviews={reviews}
+          descriptionImages={descriptionImages}
+        />
+        {showPaymentOverlay && (
+          <PaymentOverlay
+            onClose={handleCloseOverlay}
+            product={{
+              image,
+              title,
+              price: 19.99, 
+            }}
+          />
+        )}
       </>
     );
   };
