@@ -44,7 +44,7 @@ function App() {
             }
           />
           <Route
-            path="/recipie"
+            path="/recipies"
             element={
               <MainLayout>
                 <Recipies />
@@ -52,7 +52,7 @@ function App() {
             }
           />
           <Route
-            path="/pentry"
+            path="/pastry"
             element={
               <MainLayout>
                 <PentryIdeation />

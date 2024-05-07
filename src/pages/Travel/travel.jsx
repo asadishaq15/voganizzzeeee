@@ -4,6 +4,7 @@ import headingBackground from '../../assets/Images/BeautyPageBg.webp';
 import Destination1 from '../../assets/Images/Destination1.webp';
 import Destination2 from '../../assets/Images/Destination2.webp';
 import Destination3 from '../../assets/Images/Destination3.webp';
+import { Link } from 'react-router-dom';
 
 const Title = styled.h2`
   font-size: 48px;
@@ -107,14 +108,17 @@ const data = [
   {
     image: Destination1,
     title: 'Dublin',
+    route: '/travelcards' 
   },
   {
     image: Destination2,
     title: 'Maldives',
+    route: '/travelcards' 
   },
   {
     image: Destination3,
     title: 'Australia',
+    route: '/travelcards' 
   },
   // Add more data objects as needed
 ];
@@ -141,12 +145,14 @@ const Travel = () => {
       </SectionHeading>
       <CardContainer>
         {data.map((item, index) => (
-          <CardWrapper key={index}>
-            <ImageContainer>
-              <img src={item.image} alt={item.title} />
-            </ImageContainer>
-            <CardTitle>{item.title}</CardTitle>
-          </CardWrapper>
+          <Link to={item.route} key={index}> {/* Wrap each card with Link component */}
+            <CardWrapper>
+              <ImageContainer>
+                <img src={item.image} alt={item.title} />
+              </ImageContainer>
+              <CardTitle>{item.title}</CardTitle>
+            </CardWrapper>
+          </Link>
         ))}
       </CardContainer>
     </div>

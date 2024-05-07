@@ -287,11 +287,11 @@ const Navbar222 = () => {
                 onChange={handleInputChange}
               />
             </SearchContainer>
-            <ShopButton>Shop</ShopButton>
+            <Link to="/shop"> <ShopButton>Shop</ShopButton></Link>
             <ToggleButton onClick={toggleSlider}>
               <ToggleSlider sliderPosition={sliderPosition} />
             </ToggleButton>
-            <ProfileIcon src={sampleProfile} alt="Profile" />
+            <Link to="/myprofile"> <ProfileIcon src={sampleProfile} alt="Profile" /></Link>
           </NavLinks>
           <BurgerWrapper onClick={toggleMenu}>
             <BurgerBar />

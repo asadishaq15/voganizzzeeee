@@ -1,6 +1,7 @@
 // src/Login.js
 import React from 'react';
 import './login.css';
+import { Link } from 'react-router-dom';
 import logo from "../../assets/logo-green.webp";
 import backgroundImage from "../../assets/Images/loginRegisterSidePhoto.webp"
 
@@ -12,7 +13,7 @@ function Login() {
       <div className="plain-section">
         <div className="plain-section-content">
         <h2 className="login-heading">Login</h2>
-        <p className="register-text" style={{color:"#94959B", fontSize:"20px"}}>Don't have an account? <span className="green-text">Register</span></p>
+        <p className="register-text" style={{color:"#94959B", fontSize:"20px"}}>Don't have an account?<Link to="/register"><span className="green-text">Register</span></Link></p>
         <form>
           <div className="form-container">
         <div className="form-group">
@@ -46,7 +47,9 @@ function Login() {
             <label htmlFor="rememberMe" >Remember Me</label>
             <p style={{color:"#94959B", fontSize:"14px", marginTop:"24px"}}><span className="green-text">Forgot Password?</span></p>
           </div>
-          <button type="submit" className="btn-login">Login</button>
+          <Link to="/">
+            <button type="submit" className="btn-login">Login</button>
+          </Link>
           </div>
         </form>
       </div>

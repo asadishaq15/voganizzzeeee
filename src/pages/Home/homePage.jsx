@@ -1,10 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import HomeCard from '../../Components/HomeCard/homeCard';
-import Recipies from "../../assets/Images/Recipies.webp"
-import Beauty from "../../assets/Images/Beauty.webp"
-import HouseHold from "../../assets/Images/HouseHold.webp"
-import Travel from "../../assets/Images/Travel.webp"
+import Recipies from "../../assets/Images/Recipies.webp";
+import Beauty from "../../assets/Images/Beauty.webp";
+import HouseHold from "../../assets/Images/HouseHold.webp";
+import Travel from "../../assets/Images/Travel.webp";
 import Carousel from '../../Components/Carousel/carousel';
 import WhyVoganizzee from '@/Components/whyUs/whyVoganizzee';
 
@@ -13,40 +14,46 @@ const cardData = [
     id: 1,
     title: 'Recipies',
     image: Recipies,
+    route: '/menu' 
   },
   {
     id: 2,
     title: 'Beauty',
     image: Beauty,
+    route: '/beauty' 
   },
   {
     id: 3,
     title: 'HouseHold',
     image: HouseHold,
+    route: '/household' 
   },
   {
     id: 4,
     title: 'Travel',
     image: Travel,
+    route: '/travel' 
   },
 ];
 
 const HomePage = () => {
   return (
     <>
-   <Carousel/>
-    <HomePageContainer>
+      <Carousel/>
+      <HomePageContainer>
 
-      <TitleContainer>
-        <Title>All the ways we can VeganizZze</Title>
-      </TitleContainer>
-      <CardContainer>
-        {cardData.map(card => (
-          <HomeCard key={card.id} title={card.title} image={card.image} />
-        ))}
-      </CardContainer>
-      <WhyVoganizzee/>
-    </HomePageContainer>
+        <TitleContainer>
+          <Title>All the ways we can VeganizZze</Title>
+        </TitleContainer>
+        <CardContainer>
+          {cardData.map(card => (
+            <Link to={card.route} key={card.id}>
+              <HomeCard title={card.title} image={card.image} />
+            </Link>
+          ))}
+        </CardContainer>
+        <WhyVoganizzee/>
+      </HomePageContainer>
     </>
   );
 };

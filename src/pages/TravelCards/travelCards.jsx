@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import headingBackground from '../../assets/Images/BeautyPageBg.webp';
 import Dublin from '../../assets/Images/Dublin.webp';
 import recipe1 from '../../assets/Images/BreakFast.webp';
@@ -174,11 +175,11 @@ const data = [
   
 ];
 const recipes = [
-    { image: recipe1, title: 'Dinning' },
-    { image: recipe2, title: 'Food' },
-    { image: recipe3, title: 'Cosmetics' },
-
+    { image: recipe1, title: 'Dinning', route: '/restaurants' },
+    { image: recipe2, title: 'Food', route: '/foodshops' },
+    { image: recipe3, title: 'Cosmetics', route: '/cosmetics' },
   ];
+  
 
 
 const TravelCards = () => {
@@ -221,13 +222,14 @@ const TravelCards = () => {
         ))}
       </CardContainer>
       <FavoritesSection>
-        
-        <RecipesContainer>
+      <RecipesContainer>
           {recipes.map((recipe, index) => (
-            <RecipeCard key={index}>
-              <RecipeImage src={recipe.image} alt={recipe.title} />
-              <RecipeTitle>{recipe.title}</RecipeTitle>
-            </RecipeCard>
+            <Link to={recipe.route} key={index}>
+              <RecipeCard>
+                <RecipeImage src={recipe.image} alt={recipe.title} />
+                <RecipeTitle>{recipe.title}</RecipeTitle>
+              </RecipeCard>
+            </Link>
           ))}
         </RecipesContainer>
       </FavoritesSection>

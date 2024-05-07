@@ -3,6 +3,7 @@ import React from 'react';
 import './register.css'; 
 import logo from "../../assets/logo-green.webp";
 import backgroundImage from "../../assets/Images/loginRegisterSidePhoto.webp"
+import { Link } from 'react-router-dom';
 function Register() {
   return (
     <div className="register-container">
@@ -10,7 +11,7 @@ function Register() {
       <div className="plain-section">
         <div className="plain-section-content">
           <h2 className="register-heading">Register</h2>
-          <p className="register-text" style={{color:"#94959B", fontSize:"20px"}}>Already have an account? <span className="green-text">Register</span></p>
+          <p className="register-text" style={{color:"#94959B", fontSize:"20px"}}>Already have an account? <Link to="/login"><span className="green-text">Login</span></Link> </p>
           <form>
             <div className="form-container">
               <div className="form-group">
@@ -66,8 +67,11 @@ function Register() {
                 />
                 <label htmlFor="agreeTerms" style={{color:"#222222"}}>I agree to the terms and conditions of Voganizzze</label>
               </div>
+              <Link to="/">
               <button type="submit" className="btn-register">Register</button>
+              </Link>
             </div>
+                
           </form>
         </div>
       </div>
