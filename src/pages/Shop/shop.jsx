@@ -3,6 +3,7 @@ import headingBackground from "../../assets/Images/menu-bg.webp"
 import styled from 'styled-components';
 import ShopCard from '@/Components/ShopCart/shopCard';
 import ShopCardData from '@/Components/ShopCart/CardData';
+import PaymentMethodsAccepted from '@/Components/PaymentMethods/paymentMethods';
 
 
 const Title = styled.h2`
@@ -57,6 +58,7 @@ const VoganizzzeShop = () => {
         />
         ))}
       </CardContainer>
+      <PaymentMethodsAccepted/>
     </div>
   );
 }
