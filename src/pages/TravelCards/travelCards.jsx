@@ -166,7 +166,7 @@ const RecipeCard = styled.div`
 const RecipeImage = styled.img`
   width: 100%;
   height: 250px;
-  object-fit: contain;
+  object-fit: cover;
 `;
 
 const RecipeTitle = styled.h4`
