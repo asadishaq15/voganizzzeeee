@@ -212,16 +212,32 @@ const RecipesContainer = styled.div`
 `;
 
 const RecipeCard = styled.div`
+  position: relative; 
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+
+
+  border: 2px solid transparent;
+
+ 
+  transition: border-color 0.3s ease;
+
+  /* Add hover effect */
+  &:hover {
+    border-color: #4caf50; 
+  }
+
+  
+  z-index: 1;
 `;
+
 
 const RecipeImage = styled.img`
   width: 100%;
   height: 250px;
-  object-fit: contain;
+  object-fit: cover;
 `;
 
 const RecipeTitle = styled.h4`
