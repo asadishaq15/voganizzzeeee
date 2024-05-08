@@ -1,10 +1,9 @@
 import React from 'react'
 import headingBackground from "../../assets/Images/menu-bg.webp"
 import styled from 'styled-components';
-import ShopCard from '@/Components/ShopCart/shopCard';
-import ShopCardData from '@/Components/ShopCart/CardData';
-import SunshineIcon from "../../assets/SunShineWhite.webp";
-import PaymentMethodsAccepted from '@/Components/PaymentMethods/paymentMethods';
+import ProductCard from '@/Components/ProductCard/productCard';
+import ProductCardData from '@/Components/ProductCard/productCardData';
+import ProductDescriptionAndAddtoCart from '@/Components/ProductDescriptionAndAddtoCart/ProductDescriptionAndAddtoCart';
 
 
 const Title = styled.h2`
@@ -15,7 +14,7 @@ const Title = styled.h2`
   align-items: center;
 
   @media (max-width: 768px) {
-    font-size: 22px;
+    font-size: 28px;
   }
 `;
 
@@ -26,20 +25,8 @@ const CardContainer = styled.div`
   gap: 40px;
   margin-top: 40px;
 `;
-const IconImage = styled.img`
-  width: 50px; 
-  height: 50px; 
-  margin-right: 2px;
-  margin-bottom: 60px;
-  
-  @media (max-width: 768px) {
-    width: 30px;
-    height: 30px;
-    margin-right: -2px;
-    margin-bottom: 35px; 
-  }
-`;
-const VoganizzzeShop = () => {
+
+const RecipieShop = () => {
   return (
     <div>
       <div
@@ -50,19 +37,15 @@ const VoganizzzeShop = () => {
           backgroundSize: 'cover',
           backgroundAttachment: 'fixed',
           backgroundRepeat: 'no-repeat',
-          padding: '3%',
+          padding: '5%',
           color: 'white',
         }}
       >
-     
-        <Title>
-          <IconImage src={SunshineIcon} alt="Sunshine Icon" /> {/* Sunshine icon */}
-          Welcome to the VeganizZze shop!
-        </Title>
+        <Title>Welcome to the VeganizZze shop!</Title>
       </div>
       <CardContainer>
-      {ShopCardData.map((card, index) => (
-        <ShopCard
+      {ProductCardData.map((card, index) => (
+        <ProductCard
             key={index}
             image={card.image}
             title={card.title}
@@ -75,9 +58,8 @@ const VoganizzzeShop = () => {
         />
         ))}
       </CardContainer>
-      <PaymentMethodsAccepted/>
     </div>
   );
 }
 
-export default VoganizzzeShop;
+export default RecipieShop;

@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import headingBackground from '../../assets/Images/BeautyPageBg.webp';
 import houseHold from '../../assets/Images/HouseHold2.webp';
-
+import SunshineIcon from "../../assets/SunShineWhite.webp";
 
 const Title = styled.h2`
   font-size: 48px;
@@ -10,6 +10,7 @@ const Title = styled.h2`
   display: flex;
   justify-content: center;
   align-items: center;
+ 
 
   @media (max-width: 768px) {
     font-size: 28px;
@@ -96,6 +97,19 @@ const ContentItem = styled.div`
     font-size:14px;
   }
 `;
+const IconImage = styled.img`
+  width: 50px; 
+  height: 50px; 
+  margin-right: 2px;
+  margin-bottom: 60px;
+  
+  @media (max-width: 768px) {
+    width: 30px;
+    height: 30px;
+    margin-right: 2px;
+    margin-bottom: 40px; 
+  }
+`;
 
 
 const BrandName= styled.h4`
@@ -126,11 +140,15 @@ const HouseHold = () => {
           backgroundSize: 'cover',
           backgroundAttachment: 'fixed',
           backgroundRepeat: 'no-repeat',
-          padding: '5%',
+          padding: '3%',
           color: 'white',
         }}
       >
-        <Title>Household</Title>
+    
+        <Title>
+          <IconImage src={SunshineIcon} alt="Sunshine Icon" /> {/* Sunshine icon */}
+          Household
+        </Title>
       </div>
       <CardContainer>
         {data.map((item, index) => (

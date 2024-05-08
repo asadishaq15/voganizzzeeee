@@ -4,19 +4,23 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { motion } from 'framer-motion';
 import './carousel.css';
+import SunshineIcon from "../../assets/SunShineWhite.webp";
 import slides from './carouselData';
 
 const SlideContent = ({ backgroundSrc, text }) => {
   return (
     <div className="content" style={{ backgroundImage: `url(${backgroundSrc})` }}>
-      <motion.p
-        className="slide-description"
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-      >
-        {text}
-      </motion.p>
+      <div className="text-container">
+        <motion.img src={SunshineIcon} alt="Sunshine" className="sunshine-icon" />
+        <motion.p
+          className="slide-description"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          {text}
+        </motion.p>
+      </div>
     </div>
   );
 };

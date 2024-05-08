@@ -4,7 +4,7 @@ import styled from "styled-components";
 import avar1 from "../../assets/Images/Review1.webp"
 import WriteReviewComponent from "../WriteReview/writeReview";
 
-
+// Styled components for the tabs and review card
 const TabsContainer = styled.div`
   max-width: 1200px;
   margin: 0 auto;
@@ -106,7 +106,7 @@ const reviews = [
 const CustomTabs = () => {
   return (
     <TabsContainer>
-      <Tabs defaultValue="account" className="w-full">
+      <Tabs defaultValue="Description" className="w-full">
         <TabsList>
           <TabsTriggerStyled value="Description" style={{ 
                 ":hover": { 

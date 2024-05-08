@@ -5,6 +5,7 @@ import RestaurantCard from '@/Components/RatingAndReview/RatingAndReview';
 import Cosmetics1 from "../../assets/Images/Cosmetics1.webp"
 import Cosmetics2 from "../../assets/Images/Cosmetics2.webp"
 import Cosmetics3 from "../../assets/Images/Cosmetics3.webp"
+import SunshineIcon from "../../assets/SunShineWhite.webp";
 import avar1 from "../../assets/Images/Review1.webp"
 
 const CardData = [
@@ -87,7 +88,7 @@ const Title = styled.h2`
   align-items: center;
 
   @media (max-width: 768px) {
-    font-size: 28px;
+    font-size: 18px;
   }
 `;
 
@@ -97,6 +98,20 @@ const CardContainer = styled.div`
   align-items: center;
   gap: 40px;
   margin-top: 40px;
+`;
+
+const IconImage = styled.img`
+  width: 50px; 
+  height: 50px; 
+  margin-right: 2px;
+  margin-bottom: 60px;
+  
+  @media (max-width: 768px) {
+    width: 30px;
+    height: 30px;
+    margin-right: -2px;
+    margin-bottom: 35px; 
+  }
 `;
 
 const Cosmetics = () => {
@@ -110,11 +125,15 @@ const Cosmetics = () => {
           backgroundSize: 'cover',
           backgroundAttachment: 'fixed',
           backgroundRepeat: 'no-repeat',
-          padding: '5%',
+          padding: '3%',
           color: 'white',
         }}
       >
-        <Title>VeganizZzed Cosmetics  Search in Dublin</Title>
+      
+        <Title>
+          <IconImage src={SunshineIcon} alt="Sunshine Icon" /> {/* Sunshine icon */}
+          VeganizZzed Cosmetics  Search in Dublin
+        </Title>
       </div>
       <CardContainer>
       {CardData.map((card, index) => (

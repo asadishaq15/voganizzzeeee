@@ -5,7 +5,7 @@
   }
   
   .content {
-    height: 50vh; /* Adjust the height of each slide */
+    height: 50vh; 
     background-size: cover;
     background-position: center;
     display: flex;
@@ -16,26 +16,44 @@
   
   .slide-description {
     font-family: 'Playfair Display', serif;
-    font-size: 42px; /* Adjust the font size as needed */
-    color: rgb(255, 255, 255); /* Adjust the text color */
-    max-width: 80%; /* Limit the width of the paragraph */
-    margin: 0 auto; /* Center the paragraph horizontally */
+    font-size: 42px; 
+    color: rgb(255, 255, 255);
+    max-width: 80%; 
+    margin: 0 auto; 
   }
+  
   
   /* Media queries for responsiveness */
   @media screen and (max-width: 768px) {
     .slide-description {
-      font-size: 20px; /* Adjust font size for smaller screens */
+      font-size: 20px; 
     }
   }
   
   @media screen and (max-width: 576px) {
     .slide-description {
-      font-size: 18px; /* Further adjust font size for smaller screens */
+      font-size: 18px; 
     }
   }
   
 
+  .sunshine-icon {
+    width: 50px; 
+    height: auto; 
+    margin-left: 120px; 
+
+ 
+    /* Media query for smaller screens */
+    @media screen and (max-width: 768px) {
+      margin-left: 60px; 
+    }
+  
+    /* Media query for even smaller screens */
+    @media screen and (max-width: 576px) {
+      margin-left: 25px; 
+      width: 30px; 
+    }
+  }
   /* carousel.css */
 .custom-arrow {
   position: absolute;

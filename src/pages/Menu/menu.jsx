@@ -12,6 +12,7 @@ import menu7 from "../../assets/Images/menu-7.webp";
 import menu8 from "../../assets/Images/menu-8.webp";
 import menu9 from "../../assets/Images/menu-9.webp";
 import HomeCard from '../../Components/HomeCard/homeCard';
+import SunshineIcon from "../../assets/SunShineWhite.webp"; // Import sunshine image
 
 const cardData = [
   { id: 1, title: 'Breakfast', image: menu1, route: '/recipies' },
@@ -36,11 +37,14 @@ const Menu = () => {
           backgroundSize: 'cover',
           backgroundAttachment: 'fixed',
           backgroundRepeat: 'no-repeat',
-          padding: '5%',
-          color:"white"
+          padding: '4%',
+          color: 'white'
         }}
       >
-        <Title>VeganizZze your Menu</Title>
+        <Title>
+          <IconImage src={SunshineIcon} alt="Sunshine Icon" /> {/* Sunshine icon */}
+          VeganizZze your Menu
+        </Title>
       </div>
       <Wrapper>
         <CardContainer>
@@ -93,5 +97,19 @@ const Title = styled.h2`
 
   @media (max-width: 768px) {
     font-size: 28px;
+  }
+`;
+
+const IconImage = styled.img`
+  width: 50px; 
+  height: 50px; 
+  margin-right: 2px;
+  margin-bottom: 60px;
+  
+  @media (max-width: 768px) {
+    width: 30px;
+    height: 30px;
+    margin-right: 2px;
+    margin-bottom: 40px; 
   }
 `;

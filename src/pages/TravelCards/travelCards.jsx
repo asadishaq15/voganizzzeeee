@@ -6,6 +6,7 @@ import Dublin from '../../assets/Images/Dublin.webp';
 import recipe1 from '../../assets/Images/BreakFast.webp';
 import recipe2 from '../../assets/Images/Lunch.webp';
 import recipe3 from '../../assets/Images/Dinner.webp';
+import SunshineIcon from "../../assets/SunShineWhite.webp";
 
 const Wrapper = styled.div`
   display: flex;
@@ -179,6 +180,20 @@ const RecipeTitle = styled.h4`
   justify-content: center;
  
 `;
+const IconImage = styled.img`
+  width: 50px; 
+  height: 50px; 
+  margin-right: 2px;
+  margin-bottom: 60px;
+  
+  @media (max-width: 768px) {
+    width: 30px;
+    height: 30px;
+    margin-right: 2px;
+    margin-bottom: 40px; 
+  }
+`;
+
 
 const data = [
   {
@@ -212,11 +227,15 @@ const TravelCards = () => {
           backgroundSize: 'cover',
           backgroundAttachment: 'fixed',
           backgroundRepeat: 'no-repeat',
-          padding: '5%',
+          padding: '3%',
           color: 'white',
         }}
       >
-        <Title>TravelCards</Title>
+        
+        <Title>
+          <IconImage src={SunshineIcon} alt="Sunshine Icon" /> {/* Sunshine icon */}
+          TravelCards
+        </Title>
       </div>
        <Wrapper>
       <CardContainer>

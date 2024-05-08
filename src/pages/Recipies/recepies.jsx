@@ -8,6 +8,7 @@ import CookingTime from "../../assets/Images/cookingTime.webp"
 import Bookmark from "../../assets/Images/bookmark.webp"
 import Ingredients from '../../Components/Ingredients/ingredients';
 import CustomTabs from '@/Components/DescriptionTab/descriptionTab';
+import SunshineIcon from "../../assets/SunShineWhite.webp"; // Import sunshine image
 import { Book } from 'lucide-react';
 
 const Wrapper = styled.div`
@@ -176,6 +177,19 @@ const RoundButton = styled.button`
   }
 `;
 
+const IconImage = styled.img`
+  width: 50px; 
+  height: 50px; 
+  margin-right: 2px;
+  margin-bottom: 60px;
+  
+  @media (max-width: 768px) {
+    width: 30px;
+    height: 30px;
+    margin-right: 2px;
+    margin-bottom: 40px; 
+  }
+`;
 
 
 
@@ -189,12 +203,13 @@ const Recipies = () => {
           backgroundSize: 'cover',
           backgroundAttachment: 'fixed',
           backgroundRepeat: 'no-repeat',
-          padding: '5%',
+          padding: '3%',
           color: "white"
         }}
       >
         <Title>
-          Recipies
+          <IconImage src={SunshineIcon} alt="Sunshine Icon" /> {/* Sunshine icon */}
+          Recipie
         </Title>
       </div>
       <Wrapper>

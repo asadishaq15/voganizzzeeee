@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import HomeCard from '../../Components/HomeCard/homeCard';
 import Recipies from "../../assets/Images/Recipies.webp";
+import SunshineIcon from "../../assets/sunShineIcon.webp";
 import Beauty from "../../assets/Images/Beauty.webp";
 import HouseHold from "../../assets/Images/HouseHold.webp";
 import Travel from "../../assets/Images/Travel.webp";
@@ -42,10 +43,12 @@ const HomePage = () => {
       <Carousel/>
       <HomePageContainer>
 
-        <TitleContainer>
-          <Title>All the ways we can VeganizZze</Title>
-        </TitleContainer>
+      <TitleContainer>
+      <IconImage src={SunshineIcon} alt="Custom Icon" /> 
+      <Title>All the ways we can VeganizZze</Title>
+    </TitleContainer>
         <CardContainer>
+          
           {cardData.map(card => (
             <Link to={card.route} key={card.id}>
               <HomeCard title={card.title} image={card.image} />
@@ -61,6 +64,7 @@ const HomePage = () => {
 export default HomePage;
 
 // Styled components
+
 const HomePageContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -70,8 +74,16 @@ const HomePageContainer = styled.div`
 `;
 
 const TitleContainer = styled.div`
-  margin-top: 50px;
+  margin-top: 60px; /* Adjust the top margin for smaller screens */
+  display: flex;
+  align-items: center; /* Center items vertically */
+  position: relative; /* Set position to relative */
+
+  @media (max-width: 576px) {
+    margin-top: 30px; /* Further adjust the top margin for smaller screens */
+  }
 `;
+
 
 const Title = styled.h1`
   font-size: 2rem;
@@ -80,14 +92,31 @@ const Title = styled.h1`
   display: inline;
 
   @media (max-width: 576px) {
-    font-size: 1.5rem; 
+    font-size: 1.1rem; 
   }
 `;
 
+const IconImage = styled.img`
+  position: absolute; 
+  top: -22px;
+
+  left: -50px;
+  width: 44px;
+  height: 44px; 
+
+  @media (max-width: 576px) {
+    width: 30px; 
+    height: 30px; 
+    top: -20px; 
+    left: -40px; 
+  }
+`;
+
+
 const CardContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, minmax(250px, 1fr)); 
-  gap: 20px;
+  grid-template-columns: repeat(4, minmax(270px, 1fr)); 
+  gap: 10px;
   justify-items: center;
   margin-top: 50px;
 

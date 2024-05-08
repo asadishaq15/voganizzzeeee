@@ -6,6 +6,7 @@ import restaurant1 from "../../assets/Images/Restaurant1.webp"
 import restaurant2 from "../../assets/Images/Restaurant2.webp"
 import restaurant3 from "../../assets/Images/Restaurant1.webp"
 import avar1 from "../../assets/Images/Review1.webp"
+import SunshineIcon from "../../assets/SunShineWhite.webp";
 
 const CardData = [
     {
@@ -87,7 +88,7 @@ const Title = styled.h2`
   align-items: center;
 
   @media (max-width: 768px) {
-    font-size: 28px;
+    font-size: 22px;
   }
 `;
 
@@ -98,7 +99,19 @@ const CardContainer = styled.div`
   gap: 40px;
   margin-top: 40px;
 `;
-
+const IconImage = styled.img`
+  width: 50px; 
+  height: 50px; 
+  margin-right: 2px;
+  margin-bottom: 60px;
+  
+  @media (max-width: 768px) {
+    width: 30px;
+    height: 30px;
+    margin-right: -2px;
+    margin-bottom: 40px; 
+  }
+`;
 const Restaurants = () => {
   return (
     <div>
@@ -110,11 +123,15 @@ const Restaurants = () => {
           backgroundSize: 'cover',
           backgroundAttachment: 'fixed',
           backgroundRepeat: 'no-repeat',
-          padding: '5%',
+          padding: '3%',
           color: 'white',
         }}
       >
-        <Title>VeganizZzed dining in Dublin</Title>
+         <Title>
+          <IconImage src={SunshineIcon} alt="Sunshine Icon" /> {/* Sunshine icon */}
+          VeganizZzed dining in Dublin
+        </Title>
+
       </div>
       <CardContainer>
       {CardData.map((card, index) => (

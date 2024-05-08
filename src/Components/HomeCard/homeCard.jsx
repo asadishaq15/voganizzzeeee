@@ -13,20 +13,20 @@ const HomeCard = ({ image, title }) => {
 export default HomeCard;
 
 const CardWrapper = styled.div`
-  width: 250px;
-  margin: 20px;
+  width: 270px;
+
   border: 2px solid #ccc; 
   border-radius: 10px;
   overflow: hidden;
-  transition: border-color 0.3s ease; /* Add transition effect for border color */
+  transition: border-color 0.3s ease;
 
   &:hover {
-    border-color: #B8EA9B; /* Change border color on hover */
+    border-color: #B8EA9B; 
   }
 
   @media (max-width: 768px) {
-    max-width: 100%; /* Adjust width for smaller screens */
-    margin: 20px auto; /* Center the card horizontally */
+    max-width: 100%; 
+    margin: 20px auto; 
   }
 `;
 

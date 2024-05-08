@@ -8,21 +8,21 @@ import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import likeIcon from "../../assets/icons/thumb_up_alt.webp"
 import CommentIcon from "../../assets/icons/Comment.webp"
 import ShareIcon from "../../assets/icons/share.webp"
-
+import SunshineIcon from "../../assets/sunShineIcon.webp"
 const Wrapper = styled.div`
-  max-width: 1200px; /* Set the maximum width to 1200px */
-  margin: 0 auto; /* Center the component horizontally */
-  padding: 20px; /* Add padding for better spacing on smaller screens */
+  max-width: 1200px;
+  margin: 0 auto; 
+  padding: 20px; 
 
-  @media (max-width: 768px) { /* Media query for screens smaller than 768px */
+  @media (max-width: 768px) { 
     padding: 10px; /* Reduce padding on smaller screens */
   }
 `;
 
 const OuterContainer = styled.div`
-padding: 20px;
+padding: 10px;
 
-@media (max-width: 768px) { /* Media query for screens smaller than 768px */
+@media (max-width: 768px) { 
   padding: 10px; /* Reduce padding on smaller screens */
 }
 `;
@@ -31,9 +31,9 @@ const TopContainer = styled.div`
   flex-direction: row;
   justify-content: space-between;
 
-  @media (max-width: 768px) { /* Media query for screens smaller than 768px */
-   /* Change to column layout on smaller screens */
-    align-items: flex-start; /* Align items to the left */
+  @media (max-width: 768px) { 
+  
+    align-items: flex-start; 
   }
 `;
 
@@ -80,7 +80,7 @@ const InnerContainer = styled.div`
 const LeftHalf = styled.div`
   flex: 1;
   display: flex;
-  margin-right: 20px;
+  margin-right: 0px;
   flex-direction: column;
 
   @media (max-width: 768px) { /* Media query for screens smaller than 768px */
@@ -217,11 +217,27 @@ const InnerCardDescription = styled.p`
   margin-bottom: 10px;
 `;
 
+const IconImage = styled.img`
+  position: absolute; 
+  top: -22px;
+
+  left: -50px;
+  width: 44px;
+  height: 44px; 
+
+  @media (max-width: 576px) {
+    width: 30px; 
+    height: 30px; 
+    top: -20px; 
+    left: -40px; 
+  }
+`;
 const WhyVoganizzee = () => {
   return (
     <Wrapper>
     <OuterContainer>
         <TopContainer>
+        <IconImage src={SunshineIcon} alt="Custom Icon" />
       <Title>Why we VeganizZze</Title>
       <ButtonContainer>
       <Button><FontAwesomeIcon icon={faAngleLeft} /></Button>

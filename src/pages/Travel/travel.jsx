@@ -4,6 +4,7 @@ import headingBackground from '../../assets/Images/BeautyPageBg.webp';
 import Destination1 from '../../assets/Images/Destination1.webp';
 import Destination2 from '../../assets/Images/Destination2.webp';
 import Destination3 from '../../assets/Images/Destination3.webp';
+import SunshineIcon from "../../assets/SunShineWhite.webp";
 import { Link } from 'react-router-dom';
 
 const Title = styled.h2`
@@ -111,6 +112,21 @@ const CardTitle = styled.div`
   font-weight: bold;
 `;
 
+const IconImage = styled.img`
+  width: 50px; 
+  height: 50px; 
+  margin-right: 2px;
+  margin-bottom: 60px;
+  
+  @media (max-width: 768px) {
+    width: 30px;
+    height: 30px;
+    margin-right: 2px;
+    margin-bottom: 40px; 
+  }
+`;
+
+
 const data = [
   {
     image: Destination1,
@@ -141,10 +157,13 @@ const Travel = () => {
           backgroundAttachment: 'fixed',
           backgroundRepeat: 'no-repeat',
 
-          padding: '5%',
+          padding: '3%',
         }}
       >
-        <Title>Travel</Title>
+       <Title>
+          <IconImage src={SunshineIcon} alt="Sunshine Icon" /> {/* Sunshine icon */}
+          Travel
+        </Title>
       </div>
       <SectionHeading>
         <h3>Recommended Destinations </h3>

@@ -20,6 +20,7 @@ import FoodShops from './pages/FoodShops/foodShops';
 import Cosmetics from './pages/Cosmetics/cosmetics';
 import MyProfile from './pages/ProfilePage/profile';
 import TravelCards from './pages/TravelCards/travelCards';
+import RecipieShop from './pages/RecipieShop/recipieShop';
 
 
 function App() {
@@ -64,6 +65,14 @@ function App() {
             element={
               <MainLayout>
              <VoganizzzeShop/>
+              </MainLayout>
+            }
+          />
+          <Route
+            path="/recipieshop"
+            element={
+              <MainLayout>
+             <RecipieShop/>
               </MainLayout>
             }
           />

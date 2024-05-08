@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import profileIcon from '../../assets/sampleProfile.webp';
+import headingBackground from "../../assets/Images/myProfileMenu.webp"
 import itemImage from '../../assets/Images/Product1.webp';
 import recipe1 from '../../assets/Images/BreakFast.webp';
 import recipe2 from '../../assets/Images/Lunch.webp';
 import recipe3 from '../../assets/Images/Dinner.webp';
+import SunshineIcon from "../../assets/SunShineWhite.webp";
 
 
 const ProfileContainer = styled.div`
@@ -18,6 +20,18 @@ const ProfileContainer = styled.div`
 
   @media (max-width: 768px) {
     padding: 10px;
+  }
+`;
+
+const Title = styled.h2`
+  font-size: 48px;
+  font-family: 'Playfair Display', serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    font-size: 18px;
   }
 `;
 
@@ -260,6 +274,19 @@ const RecipeTitle = styled.h4`
   justify-content: center;
  
 `;
+const IconImage = styled.img`
+  width: 50px; 
+  height: 50px; 
+  margin-right: 2px;
+  margin-bottom: 60px;
+  
+  @media (max-width: 768px) {
+    width: 30px;
+    height: 30px;
+    margin-right: -2px;
+    margin-bottom: 35px; 
+  }
+`;
 
 const MyProfile = () => {
   const username = 'John Doe';
@@ -287,6 +314,25 @@ const MyProfile = () => {
   };
 
   return (
+    <>
+    <div
+    className="blogs-heading-container"
+    style={{
+      backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${headingBackground})`,
+      backgroundPosition: 'center',
+      backgroundSize: 'cover',
+      backgroundAttachment: 'fixed',
+      backgroundRepeat: 'no-repeat',
+      padding: '3%',
+      color: 'white',
+    }}
+  >
+  
+    <Title>
+      <IconImage src={SunshineIcon} alt="Sunshine Icon" /> {/* Sunshine icon */}
+      My VeganizZze Account
+    </Title>
+  </div>
     <ProfileContainer>
       <ProfileHeader>
         <ProfileIcon src={profileIcon} alt="Profile Icon" />
@@ -359,6 +405,7 @@ const MyProfile = () => {
         </RecipesContainer>
       </FavoritesSection>
     </ProfileContainer>
+    </>
   );
 };
 

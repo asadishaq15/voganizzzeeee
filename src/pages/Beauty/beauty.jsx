@@ -4,7 +4,7 @@ import headingBackground from '../../assets/Images/BeautyPageBg.webp';
 import BeautyCard1 from '../../assets/Images/BeautyCard1.webp';
 import BeautyCard2 from '../../assets/Images/BeautyCard2.webp';
 import BeautyCard3 from '../../assets/Images/BeautyCard3.webp';
-
+import SunshineIcon from "../../assets/SunShineWhite.webp";
 const Title = styled.h2`
   font-size: 48px;
   font-family: 'Playfair Display', serif;
@@ -94,6 +94,20 @@ const ContentItem = styled.div`
   }
 `;
 
+const IconImage = styled.img`
+  width: 50px; 
+  height: 50px; 
+  margin-right: 2px;
+  margin-bottom: 60px;
+  
+  @media (max-width: 768px) {
+    width: 30px;
+    height: 30px;
+    margin-right: 2px;
+    margin-bottom: 40px; 
+  }
+`;
+
 
 const BrandName= styled.h4`
 margin-right:10px
@@ -140,11 +154,14 @@ const Beauty = () => {
           backgroundSize: 'cover',
           backgroundAttachment: 'fixed',
           backgroundRepeat: 'no-repeat',
-          padding: '5%',
+          padding: '3%',
           color: 'white',
         }}
       >
-        <Title>Beauty</Title>
+          <Title>
+          <IconImage src={SunshineIcon} alt="Sunshine Icon" /> {/* Sunshine icon */}
+          Beauty
+        </Title>
       </div>
       <CardContainer>
         {data.map((item, index) => (

@@ -39,7 +39,7 @@
   width: 200px;
   height: auto;
   margin: 10px; 
-  position: absolute; /* Position absolute for precise placement */
+  position: absolute; 
   top: 10px; /* Position from the top */
   left: 10px; /* Position from the left */
 }
