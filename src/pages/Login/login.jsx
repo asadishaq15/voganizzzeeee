@@ -12,7 +12,7 @@ function Login() {
           <div className="plain-section-content">
             <img src={logo} alt="Logo" className="logo" />
             <h2 className="login-heading">Login</h2>
-            <p className="register-text" style={{color:"#94959B", fontSize:"20px"}}>Don't have an account?<Link to="/register"><span className="green-text">Register</span></Link></p>
+            <p className="register-text" style={{color:"#94959B", fontSize:"20px"}}>Don't have an account? <Link to="/register"><span className="green-text">Register</span></Link></p>
             <form>
               <div className="form-container">
                 <div className="form-group">
