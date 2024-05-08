@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { navlinks } from '../../assets/navlinks';
+import { navlinks } from '../Navbar/navlinks';
 
 const DropDownMenu = ({ isNavMenuOpen, setIsNavMenuOpen }) => {
   const handleNavheaderLinkClick = () => {

@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { navlinks } from '../../assets/navlinks';
+import { navlinks } from '../Navbar/navlinks';
 import BurgerMenu from './BurgerMenu';
 
 import DropDownMenu from './DropDownMenu';

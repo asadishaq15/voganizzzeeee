@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import styled, { createGlobalStyle } from 'styled-components';
-import { navlinks } from '../../assets/navlinks';
 import logoGreen from '../../assets/logo-green.webp';
 import sampleProfile from '../../assets/sampleProfile.webp';
 import { FaSearch } from 'react-icons/fa';
-
+import { navlinks } from './navlinks';
+import { Link, useNavigate } from 'react-router-dom';
 const GlobalStyle = createGlobalStyle`
   body {
     background-color: ${({ theme }) => theme.bodyBg};
@@ -87,6 +86,7 @@ const NavLinks = styled.nav`
     display: flex;
     align-items: center;
     margin-left: auto;
+    
   }
 `;
 
@@ -204,14 +204,13 @@ const DropdownMenu = styled.div`
   flex-direction: column;
   overflow: hidden;
   transition: all 0.5s ease;
-  max-height: ${({ isOpen }) => (isOpen ? '40px' : '0')};
-  padding: ${({ isOpen }) => (isOpen ? '6px 0' : '0')};
+  max-height: ${({ isOpen }) => (isOpen ? '200px' : '0')};
+  padding: ${({ isOpen }) => (isOpen ? '10px 0' : '0')};
 
   @media (min-width: 640px) {
     display: none;
   }
 `;
-
 const DropdownLink = styled(Link)`
   color: #333;
   text-decoration: none;
@@ -231,7 +230,7 @@ const Navbar222 = () => {
   const [query, setQuery] = useState('');
   const [theme, setTheme] = useState('light');
   const [sliderPosition, setSliderPosition] = useState('left');
-
+  const navigate = useNavigate(); 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
@@ -300,16 +299,18 @@ const Navbar222 = () => {
           </BurgerWrapper>
         </NavWrapper>
         <DropdownMenu isOpen={isOpen}>
-          {navlinks.map((link) => (
-            <DropdownLink
-              key={link.id}
-              to={link.path}
-              onClick={() => setIsOpen(false)}
-            >
-              {link.text}
-            </DropdownLink>
-          ))}
-        </DropdownMenu>
+        {navlinks.map((link) => (
+          <DropdownLink
+            key={link.id}
+            onClick={() => {
+              setIsOpen(false);
+              navigate(link.path); // Use the navigate function here
+            }}
+          >
+            {link.text}
+          </DropdownLink>
+        ))}
+      </DropdownMenu>
       </HeaderContainer>
     </>
   );
