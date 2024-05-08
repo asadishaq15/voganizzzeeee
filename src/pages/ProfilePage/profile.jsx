@@ -178,10 +178,21 @@ const UpdatePasswordButton = styled.button`
   transition: background-color 0.3s ease;
   width: auto;
 
+  
+  background-image: linear-gradient(to bottom, #4caf50, #388e3c); 
+
   &:hover {
-    background-color: #555;
+    background-image: linear-gradient(to bottom, #388e3c, #2e7d32);
   }
+
+  &:focus {
+    background-image: linear-gradient(to bottom, #388e3c, #2e7d32); 
+  }
+
+  &:active {
+    background-image: linear-gradient(to bottom, #1b5e20, #1b5e20); 
 `;
+
 const FavoritesSection = styled.div`
   margin-top: 40px;
 `;

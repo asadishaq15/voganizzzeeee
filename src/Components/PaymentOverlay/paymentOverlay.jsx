@@ -105,15 +105,13 @@ const PriceDetailValue = styled.span`
 
 const PaymentOptionsContainer = styled.div`
   display: flex;
-  justify-content: center; 
+  justify-content: center;
   margin-bottom: 20px;
 `;
-
 const PaymentOption = styled.div`
   display: flex;
   align-items: center;
   cursor: pointer;
-  margin: 0 10px; 
 `;
 
 const PaymentIcon = styled.img`
@@ -214,19 +212,8 @@ const PaymentOverlay = ({ onClose, product }) => {
     console.log('Payment submitted!');
     onClose();
   };
-  const handleOutsideClick = (event) => {
-    if (!event.target.closest('OverlayContent')) {
-      onClose();
-    }
-  };
-  
-  useEffect(() => {
-    document.addEventListener('mousedown', handleOutsideClick);
-  
-    return () => {
-      document.removeEventListener('mousedown', handleOutsideClick);
-    };
-  }, [onClose]);
+
+
 
   return (
     <OverlayContainer>
