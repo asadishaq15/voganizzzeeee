@@ -5,7 +5,7 @@
 
 .register-heading {
   font-family: 'Poppins', sans-serif;
-  font-size: 35px;
+  font-size: 30px;
   margin-top: 0;
 }
 
@@ -41,6 +41,7 @@
   align-items: center;
   max-width: 400px;
   width: 100%;
+  margin: auto 0; /* Added top and bottom margin */
 }
 
 .form-container {
@@ -75,7 +76,7 @@ label {
 
 input[type='text'],
 input[type='password'] {
-  padding: 10px;
+  padding: 5px;
   width: 100%;
   border: none;
   background-color: rgb(227, 227, 227);
