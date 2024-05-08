@@ -14,7 +14,7 @@ export default HomeCard;
 
 const CardWrapper = styled.div`
   width: 270px;
-
+  margin-bottom:20px;
   border: 2px solid #ccc; 
   border-radius: 10px;
   overflow: hidden;

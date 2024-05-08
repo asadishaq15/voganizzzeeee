@@ -12,7 +12,7 @@ import menu7 from "../../assets/Images/menu-7.webp";
 import menu8 from "../../assets/Images/menu-8.webp";
 import menu9 from "../../assets/Images/menu-9.webp";
 import HomeCard from '../../Components/HomeCard/homeCard';
-import SunshineIcon from "../../assets/SunShineWhite.webp"; // Import sunshine image
+import SunshineIcon from "../../assets/SunShineWhite.webp"; 
 
 const cardData = [
   { id: 1, title: 'Breakfast', image: menu1, route: '/recipies' },
@@ -65,7 +65,7 @@ const CardContainer = styled.div`
   max-width: 1200px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 0px;
+  gap: 10px;
   justify-items: center;
   margin-top: 50px;
 
