@@ -1,21 +1,21 @@
 .register {
   display: flex;
   height: 100vh;
-  flex-direction: column; /* Stack sections vertically on smaller screens */
 }
 
 .register-heading {
   font-family: 'Poppins', sans-serif;
   font-size: 35px;
+  margin-top: 0;
 }
 
 .colored-section,
 .plain-section {
   flex: 1;
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  padding: 20px; /* Add some padding for smaller screens */
+  align-items: center;
+  padding: 20px;
 }
 
 .btn-register {
@@ -32,57 +32,32 @@
 .logo {
   width: 200px;
   height: auto;
-  margin: 10px; 
-  position: absolute; 
-  top: 10px; /* Position from the top */
-  left: 10px; /* Position from the left */
-}
-
-.quotation {
-  font-size: 40px;
-  margin-bottom: 0;
-}
-
-.h1-register,
-.h2-register {
-  font-size: 40px;
-}
-
-.plain-section {
-  background-color: white;
+  margin-bottom: 20px;
 }
 
 .plain-section-content {
-  margin: 0 auto; /* Center the content horizontally */
-  align-items: center;
-}
-
-.form-container {
-  margin-top: 20px;
-}
-
-form {
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 400px;
+  width: 100%;
 }
 
-.form-group label,
-input[type='text'],
-input[type='password'],
-button {
-  font-size: 18px;
+.form-container {
+  width: 100%;
+}
+
+form {
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 20px;
 }
 
 .form-group label {
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
-}
-
-.form-group {
-  margin-bottom: 20px;
-  width: 100%; /* Make form groups full width on smaller screens */
-  max-width: 300px; /* Set a maximum width for larger screens */
 }
 
 label {
@@ -99,12 +74,11 @@ label {
 }
 
 input[type='text'],
-input[type='password'],
-button {
+input[type='password'] {
   padding: 10px;
   width: 100%;
   border: none;
-  background-color: transparent;
+  background-color: rgb(227, 227, 227);
   border-radius: 5px;
   margin-top: 5px;
   font-size: 16px;
@@ -126,32 +100,15 @@ input[type='checkbox'] {
 }
 
 input[type='checkbox']:checked {
-  background-color: #008001; /* Change background color to green */
+  background-color: #008001;
 }
 
-/* Media queries for responsive design */
-
 @media (max-width: 768px) {
-  .colored-section {
-    padding-left: 20px; /* Reduce padding for smaller screens */
+  .register {
+    flex-direction: column;
   }
 
   .colored-section {
     display: none;
-  }
-
-  .h1-register,
-  .h2-register {
-    font-size: 32px;
-  }
-
-  .form-group {
-    width: 100%; /* Make form groups full width on smaller screens */
-  }
-}
-
-@media (min-width: 769px) {
-  .register {
-    flex-direction: row; /* Switch to horizontal layout for larger screens */
   }
 }
