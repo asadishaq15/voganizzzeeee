@@ -84,6 +84,7 @@ const ContentItem = styled.div`
   width: 100%; 
   padding:10px;
   h3 {
+    font-weight:bold;
     font-size: 1.4rem;
     font-family: 'Ubuntu', sans-serif; 
     margin-bottom: 0.5rem;

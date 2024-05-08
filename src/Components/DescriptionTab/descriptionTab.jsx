@@ -4,7 +4,7 @@ import styled from "styled-components";
 import avar1 from "../../assets/Images/Review1.webp"
 import WriteReviewComponent from "../WriteReview/writeReview";
 
-// Styled components for the tabs and review card
+
 const TabsContainer = styled.div`
   max-width: 1200px;
   margin: 0 auto;
@@ -72,6 +72,13 @@ const ReviewDetails = styled.div`
 const Reviewer = styled.span`
   margin-right: 8px;
 `;
+const TabsTriggerStyled = styled(TabsTrigger)`
+font-size:18px;
+  &:hover {
+    background-color: #71991B;
+    color: white;
+  }
+`;
 
 // Review data
 const reviews = [
@@ -94,14 +101,25 @@ const reviews = [
   // Add more review objects as needed
 ];
 
+
 // CustomTabs component
 const CustomTabs = () => {
   return (
     <TabsContainer>
       <Tabs defaultValue="account" className="w-full">
         <TabsList>
-          <TabsTrigger value="Description" >Description</TabsTrigger>
-          <TabsTrigger value="Reviews">Reviews</TabsTrigger>
+          <TabsTriggerStyled value="Description" style={{ 
+                ":hover": { 
+                backgroundColor: "#71991B",
+                color: "white"
+                }
+            }} >Description</TabsTriggerStyled>
+          <TabsTriggerStyled value="Reviews" style={{ 
+                ":hover": { 
+                backgroundColor: "#71991B",
+                color: "white"
+                }
+            }}>Reviews</TabsTriggerStyled>
         </TabsList>
         <TabsContent value="Description">
           <p>

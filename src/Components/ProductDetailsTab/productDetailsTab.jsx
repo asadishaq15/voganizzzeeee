@@ -100,6 +100,7 @@ const DescriptionImage = styled.img`
 
 // CustomTabs component
 const TabsTriggerStyled = styled(TabsTrigger)`
+font-size:18px;
   &:hover {
     background-color: #71991B;
     color: white;
