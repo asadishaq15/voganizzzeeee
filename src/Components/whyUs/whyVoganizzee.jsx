@@ -80,7 +80,7 @@ const InnerContainer = styled.div`
 const LeftHalf = styled.div`
   flex: 1;
   display: flex;
-  margin-right: 0px;
+  margin-right: 20px;
   flex-direction: column;
 
   @media (max-width: 768px) { /* Media query for screens smaller than 768px */
