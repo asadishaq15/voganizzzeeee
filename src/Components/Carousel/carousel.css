@@ -44,8 +44,6 @@
     width: 50px; 
     height: auto; 
     margin-left: 140px; 
-
-
  
     /* Media query for smaller screens */
     @media screen and (max-width: 768px) {
@@ -54,7 +52,7 @@
   
     /* Media query for even smaller screens */
     @media screen and (max-width: 576px) {
-      margin-left: 32px; 
+      margin-left: 20px; 
       width: 30px; 
     }
   }
