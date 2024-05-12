@@ -39,6 +39,7 @@ const TopContainer = styled.div`
 
 const Title = styled.h2`
   font-size: 2rem;
+  font-weight:bold;
   @media (max-width: 768px)
    { 
     font-size: 1.3rem;
@@ -221,7 +222,7 @@ const InnerCardContent = styled.div`
 `;
 
 const InnerCardTitle = styled.h3`
-  font-size: 18px;
+  font-size: 20px;
   font-weight:bold;
   margin-bottom: 10px;
 `;

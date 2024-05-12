@@ -13,6 +13,7 @@ import menu8 from "../../assets/Images/menu-8.webp";
 import menu9 from "../../assets/Images/menu-9.webp";
 import HomeCard from '../../Components/HomeCard/homeCard';
 import SunshineIcon from "../../assets/SunShineWhite.webp"; 
+import MenuCard from '@/Components/MenuCard/menuCard';
 
 const cardData = [
   { id: 1, title: 'Breakfast', image: menu1, route: '/recipies' },
@@ -50,7 +51,7 @@ const Menu = () => {
         <CardContainer>
           {cardData.map(card => (
             <Link to={card.route} key={card.id}>
-              <HomeCard title={card.title} image={card.image} />
+              <MenuCard title={card.title} image={card.image} />
             </Link>
           ))}
         </CardContainer>
@@ -65,7 +66,7 @@ const CardContainer = styled.div`
   max-width: 1200px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+  gap: 5px;
   justify-items: center;
   margin-top: 50px;
 

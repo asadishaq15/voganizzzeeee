@@ -74,7 +74,7 @@ const RecipeTitle = styled.h3`
   font-size: 32px;
   font-weight: bold;
   margin-bottom: 20px;
-  font-family: 'Playfair Display', serif;
+
 
   @media (max-width: 480px) {
     font-size: 24px;
@@ -86,7 +86,7 @@ const RecipeData = styled.div`
   margin-bottom: 20px;
   display: flex;
   flex-direction: row;
-  font-family: 'Playfair Display', serif;
+
 
   @media (max-width: 480px) {
     flex-wrap: wrap; /* Allow wrapping on smaller screens */
@@ -107,7 +107,7 @@ const RecipeLabel = styled.span`
   font-size: 25px;
   margin-right: 8px;
   margin-left: 12px;
-  font-family: 'Playfair Display', serif;
+
 
   @media (max-width: 480px) {
     font-size: 17px;
@@ -122,7 +122,7 @@ const Values = styled.span`
   font-size: 25px;
   margin-right: 8px;
   font-weight:bold;
-  font-family: 'Playfair Display', serif;
+
 
   @media (max-width: 480px) {
     margin-top: 8px;
@@ -272,7 +272,7 @@ export default Recipies;
 
 const Title = styled.h2`
   font-size: 48px;
-  font-family: 'Playfair Display', serif;
+
   display: flex;
   justify-content: center;
   align-items: center;

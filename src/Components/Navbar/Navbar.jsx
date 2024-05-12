@@ -40,6 +40,12 @@ const HeaderContainer = styled.header`
 
 const Logo = styled.img`
   height: 50px;
+  width: auto; /* Maintain aspect ratio */
+
+  @media (max-width: 639px) {
+    height: auto; /* Adjust height automatically */
+    width: 160px; 
+  }
 `;
 
 const NavWrapper = styled.div`
