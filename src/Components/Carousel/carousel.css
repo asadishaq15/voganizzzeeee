@@ -43,7 +43,7 @@
   .sunshine-icon {
     width: 50px; 
     height: auto; 
-    margin-left: 140px; 
+    margin-left: 92px; 
  
     /* Media query for smaller screens */
     @media screen and (max-width: 768px) {
