@@ -5,27 +5,34 @@
 
 .register-heading {
   font-family: 'Poppins', sans-serif;
-  font-size: 30px;
+  font-size: 26px;
   margin-top: 0;
+  
+}
+.register-text{
+  margin-bottom: -6px;
+  font-size: 16px;
 }
 
-.colored-section,
 .plain-section {
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 20px;
+
 }
 
 .btn-register {
   background-color: #008001;
   color: #fff;
   border: none;
-  padding: 10px 20px;
+  margin-top: -2px;
+  padding: 6px 12px;
   border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
+  width: 150px;
   transition: background-color 0.3s ease;
 }
 
@@ -50,10 +57,12 @@
 
 .form-container {
   width: 100%;
+  margin-bottom: 0px;
 }
 
 form {
   width: 100%;
+ 
 }
 
 .form-group {
@@ -61,12 +70,13 @@ form {
 }
 
 .form-group label {
+  font-size: 12px;
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
 }
 
 label {
-  font-size: 16px;
+  font-size: 12px;
   margin-bottom: 5px;
 }
 
@@ -78,21 +88,13 @@ label {
   color: #008001;
 }
 
-input[type='text'],
-input[type='password'] {
-  padding: 5px;
-  width: 100%;
-  border: none;
-  background-color: rgb(227, 227, 227);
-  border-radius: 5px;
-  margin-top: 5px;
-  font-size: 16px;
-}
+
+
 
 button {
   background-color: #008001;
   color: #fff;
-  cursor: pointer;
+  cursor: pointer;width: auto;
 }
 
 button:hover {
