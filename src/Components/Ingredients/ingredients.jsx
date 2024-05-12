@@ -44,18 +44,22 @@ const RightHalf = styled.div`
 `;
 
 const Title = styled.h3`
-  font-size: 24px;
+  font-size: 25px;
+  font-family: 'Playfair Display', serif; 
   font-weight: bold;
   margin-bottom: 10px;
 
   @media (max-width: 480px) {
     font-size: 20px;
+    margin-bottom: 5px;
+    margin-left:10px;
   }
 `;
 
 const IngredientsList = styled.ul`
 background-color: #f5fce4;
   list-style-type: none;
+  
   columns: 2;
   
 
@@ -65,9 +69,9 @@ background-color: #f5fce4;
   }
 
   @media (max-width: 480px) {
-    padding: 15px;
-    border-radius: 20px;
-    padding: 10px;
+  
+    border-radius: 6px;
+    margin:12px;
   }
 `;
 
@@ -92,6 +96,7 @@ const PortionsContainer = styled.div`
   flex-direction: column;
   padding: 15px;
   position: relative;
+  border-radius: 6px;
 `;
 
 const PortionTitle = styled.h3`
@@ -102,15 +107,16 @@ font-family: 'Playfair Display', serif;
   position: relative; /* Add relative positioning */
 
   @media (max-width: 480px) {
-    font-size: 18px;
+    font-size: 20px;
     top: -20px; /* Adjust the top position for smaller screens */
   }
 `;
 
 const PortionContent = styled.ul`
-  margin-top: 20px;
+
   background-color: #f5fce4;
   list-style-type: none;
+
 `;
 
 const TickItem = styled.li`
@@ -137,9 +143,9 @@ const ListItem = styled.li`
 
 const CopyButton1 = styled.button`
   position: absolute;
-  top: 8%;
+  top: 10%;
   transform: translateY(-20%);
-  left: 81%;
+  left: 83%;
   display: flex;
   align-items: center;
   padding: 5px 10px;
@@ -156,7 +162,40 @@ const CopyButton1 = styled.button`
   }
 
   @media (max-width: 768px) {
-    position: absolute; /* Change back to absolute for smaller screens */
+    position: absolute; 
+    top: 2%;
+    transform: translateY(-50%);
+    left:75%;
+    padding: 5px 8px;
+  }
+
+  @media (max-width: 480px) {
+    right: 10px;
+    padding: 5px 6px;
+  }
+`;
+const CopyButton2 = styled.button`
+  position: absolute;
+  top: 22%;
+  transform: translateY(-20%);
+  left: 76%;
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  border: none;
+  color: black;
+  width: 70px;
+  border-radius: 5px;
+  background-color: transparent;
+  cursor: pointer;
+  z-index: 1; /* Ensure button is above content */
+  
+  &:hover {
+    background-color: transparent;
+  }
+
+  @media (max-width: 768px) {
+    position: absolute; 
     top: 3%;
     transform: translateY(-50%);
     right: 15px; /* Adjust the right position */
@@ -169,13 +208,9 @@ const CopyButton1 = styled.button`
   }
 `;
 
-
-
-const CopyIcon = styled.span`
+const CopyIcon = styled.img`
   margin-right: 5px;
-  
 `;
-
 
 const Ingredients = () => {
     const [copiedText, setCopiedText] = useState('');
@@ -211,11 +246,11 @@ const Ingredients = () => {
     <Wrapper>
       <InnerContainer>
         <LeftHalf>
-          <Title>Ingredients</Title>
+          <Title>The Good stuff</Title>
          
           <IngredientsList>
           <CopyButton1 onClick={() => handleCopy(getIngredientsText())}>
-            <CopyIcon ><img  src={copyIcon}  ></img></CopyIcon>
+            <CopyIcon src={copyIcon} />
             Copy
           </CopyButton1>
             <IngredientItem className="ingredient-item"><IngredientTick>&#10003;</IngredientTick> Ingredient 1</IngredientItem>
@@ -239,10 +274,10 @@ const Ingredients = () => {
           <PortionsContainer>
             <PortionTitle>The Magic</PortionTitle>
             <PortionContent>
-            <CopyButton1 onClick={() => handleCopy(getPortionUpText())}>
-              <CopyIcon><img src={copyIcon}></img></CopyIcon>
-              Copy
-            </CopyButton1>
+            <CopyButton2 onClick={() => handleCopy(getPortionUpText())}>
+            <CopyIcon src={copyIcon} />
+               Copy
+            </CopyButton2>
               <ListItem className="portion-up-item">Prep the eggs: Crack the eggs into a bowl.</ListItem>
               <ListItem className="portion-up-item">Melt the butter: In an 8-inch nonstick skillet over medium-low heat, melt the butter.</ListItem>
               <ListItem className="portion-up-item">Add the eggs and cook the omelette: Add the eggs to the skillet and cook without stirring until the edges begin to set.</ListItem>

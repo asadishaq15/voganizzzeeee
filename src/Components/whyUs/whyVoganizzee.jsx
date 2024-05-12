@@ -38,36 +38,47 @@ const TopContainer = styled.div`
 `;
 
 const Title = styled.h2`
-  font-size: 48px;
-  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
   @media (max-width: 768px)
    { 
-    font-size: 28px;
+    font-size: 1.3rem;
+    margin-top:18px;
  }
 `;
+
 
 const ButtonContainer = styled.div`
   display: flex;
   align-items: center;
   margin-top: 10px;
   justify-content: space-between; /* Push items to the right corner */
+
+  @media (max-width: 768px) {
+   margin-left:0px;
+  }
 `;
+
 const Button = styled.button`
   background-color: transparent;
   border: 1px solid #749A21;
   cursor: pointer;
-  border-radius:none;
+  border-radius: none;
   font-size: 20px;
-  color:#749A21;
+  color: #749A21;
   padding: 8px 12px;
   margin-right: 10px;
   transition: color 0.3s; /* Add transition for smooth color change */
 
+  @media (max-width: 768px) {
+    padding: 2px 8px;
+  }
+
   &:hover {
-    color: #FFFFFF; /* Change color to white on hover */
-    background-color:#749A21;
+    color: #ffffff;
+    background-color: #749a21;
   }
 `;
+
 
 const InnerContainer = styled.div`
   display: flex;
@@ -116,6 +127,7 @@ padding :20px;
 
 const CardTitle = styled.h3`
   font-size: 18px;
+  font-weight:bold;
   margin-bottom: 10px;
   
 `;
@@ -210,6 +222,7 @@ const InnerCardContent = styled.div`
 
 const InnerCardTitle = styled.h3`
   font-size: 18px;
+  font-weight:bold;
   margin-bottom: 10px;
 `;
 
@@ -226,23 +239,31 @@ const IconImage = styled.img`
   height: 44px; 
 
   @media (max-width: 576px) {
-    width: 30px; 
-    height: 30px; 
-    top: -20px; 
-    left: -40px; 
+    width: 25px; 
+    height: 25px; 
+    top: 0px; 
+    left: -25px; 
   }
 `;
+const TitleContainer = styled.div`
+  display: flex;
+  align-items: center; /* Center items vertically */
+  position: relative; /* Set position to relative */
+`;
+
 const WhyVoganizzee = () => {
   return (
     <Wrapper>
     <OuterContainer>
-        <TopContainer>
-        <IconImage src={SunshineIcon} alt="Custom Icon" />
-      <Title>Why we VeganizZze</Title>
-      <ButtonContainer>
-      <Button><FontAwesomeIcon icon={faAngleLeft} /></Button>
-<Button><FontAwesomeIcon icon={faAngleRight} /></Button>
-      </ButtonContainer>
+      <TopContainer>
+        <TitleContainer>
+          <IconImage src={SunshineIcon} alt="Custom Icon" /> 
+          <Title>Why we VeganizZze</Title>
+        </TitleContainer>
+        <ButtonContainer>
+          <Button><FontAwesomeIcon icon={faAngleLeft} /></Button>
+          <Button><FontAwesomeIcon icon={faAngleRight} /></Button>
+        </ButtonContainer>
       </TopContainer>
       <InnerContainer>
         <LeftHalf>
@@ -250,23 +271,22 @@ const WhyVoganizzee = () => {
             <CardImage src={WhyUs} alt="Why Voganizzee" />
           </CardContainer>
           <CardContent>
-          <Hashtags>Food</Hashtags>
+            <Hashtags>Food</Hashtags>
             <CardTitle>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus dui lacus.</CardTitle>
-            
             <CardDescription>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod. 
             </CardDescription>
             <CardDetails>
-  <div style={{ display: 'flex', alignItems: 'center' }}>
-    <ReadMoreLink>Read More</ReadMoreLink>
-    <CardDate>02 January 2024</CardDate>
-  </div>
-  <CardIcons>
-    <CardIcon>< img src={likeIcon} /></CardIcon>
-    <CardIcon>< img src={CommentIcon} /></CardIcon>
-    <CardIcon>< img src={ShareIcon} /></CardIcon>
-  </CardIcons>
-</CardDetails>
+              <div style={{ display: 'flex', alignItems: 'center' }}>
+                <ReadMoreLink>Read More</ReadMoreLink>
+                <CardDate>02 January 2024</CardDate>
+              </div>
+              <CardIcons>
+                <CardIcon><img src={likeIcon} /></CardIcon>
+                <CardIcon><img src={CommentIcon} /></CardIcon>
+                <CardIcon><img src={ShareIcon} /></CardIcon>
+              </CardIcons>
+            </CardDetails>
           </CardContent>
         </LeftHalf>
         <RightHalf>
@@ -295,7 +315,7 @@ const WhyVoganizzee = () => {
         </RightHalf>
       </InnerContainer>
     </OuterContainer>
-    </Wrapper>
+  </Wrapper>
   );
 };
 

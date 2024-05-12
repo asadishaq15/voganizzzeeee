@@ -6,20 +6,20 @@ import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import missionStatemnent from "../../assets/Images/MissionStatement.webp"
 
 const Wrapper = styled.div`
-  max-width: 1200px; /* Set the maximum width to 1200px */
-  margin: 0 auto; /* Center the component horizontally */
-  padding: 20px; /* Add padding for better spacing on smaller screens */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 
-  @media (max-width: 768px) { /* Media query for screens smaller than 768px */
-    padding: 10px; /* Reduce padding on smaller screens */
+  @media (max-width: 768px) { 
+    padding: 10px; 
   }
 `;
 
 const OuterContainer = styled.div`
 padding: 20px;
 
-@media (max-width: 768px) { /* Media query for screens smaller than 768px */
-  padding: 10px; /* Reduce padding on smaller screens */
+@media (max-width: 768px) { 
+  padding: 10px; 
 }
 `;
 const TopContainer = styled.div`
@@ -27,14 +27,15 @@ const TopContainer = styled.div`
   flex-direction: row;
   justify-content: space-between;
 
-  @media (max-width: 768px) { /* Media query for screens smaller than 768px */
-   /* Change to column layout on smaller screens */
-    align-items: flex-start; /* Align items to the left */
+  @media (max-width: 768px) { 
+   
+    align-items: flex-start; 
   }
 `;
 
 const Title = styled.h2`
   font-size: 48px;
+  font-weight:bold;
   font-family: 'Playfair Display', serif;
   @media (max-width: 768px)
    { 
@@ -46,7 +47,7 @@ const ButtonContainer = styled.div`
   display: flex;
   align-items: center;
   margin-top: 10px;
-  justify-content: space-between; /* Push items to the right corner */
+  justify-content: space-between;
 `;
 const Button = styled.button`
   background-color: transparent;
@@ -69,8 +70,8 @@ const InnerContainer = styled.div`
   display: flex;
   margin-top: 20px;
 
-  @media (max-width: 768px) { /* Media query for screens smaller than 768px */
-    flex-direction: column; /* Change to column layout on smaller screens */
+  @media (max-width: 768px) { 
+    flex-direction: column; 
   }
 `;
 const LeftHalf = styled.div`
@@ -78,9 +79,9 @@ const LeftHalf = styled.div`
   display: flex;
   margin-right: 20px;
 
-  @media (max-width: 768px) { /* Media query for screens smaller than 768px */
-    margin-right: 0; /* Remove right margin on smaller screens */
-    margin-bottom: 20px; /* Add bottom margin for spacing */
+  @media (max-width: 768px) { 
+    margin-right: 0; 
+    margin-bottom: 20px; 
   }
 `;
 

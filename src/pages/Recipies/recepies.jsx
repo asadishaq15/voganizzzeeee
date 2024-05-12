@@ -3,12 +3,12 @@ import headingBackground from "../../assets/Images/menu-bg.webp"
 import styled from 'styled-components';
 
 import chef from "../../assets/Images/chef.webp"
-import PrepTime from "../../assets/Images/prepTime.webp"
+import PrepTime from "../../assets/Images/prepTime2.webp"
 import CookingTime from "../../assets/Images/cookingTime.webp"
 import Bookmark from "../../assets/Images/bookmark.webp"
 import Ingredients from '../../Components/Ingredients/ingredients';
 import CustomTabs from '@/Components/DescriptionTab/descriptionTab';
-import SunshineIcon from "../../assets/SunShineWhite.webp"; // Import sunshine image
+import SunshineIcon from "../../assets/SunShineWhite.webp";
 import { Book } from 'lucide-react';
 
 const Wrapper = styled.div`
@@ -58,14 +58,15 @@ const RightHalf = styled.div`
 `;
 
 const CardImage = styled.img`
-  width: auto; /* Set the width to auto to adjust based on height */
-  max-height: 100%; /* Set the maximum height to 100% */
-  object-fit: contain; /* Fit the image inside the container */
+  width: auto; 
+  max-height: 100%; 
+  object-fit: contain; 
   border-radius: 12px;
 
   @media (max-width: 480px) {
-    max-width: 100%; /* Set the maximum width to 100% on smaller screens */
-    height: auto; /* Maintain aspect ratio */
+    max-width: 100%;
+    height: auto; 
+    margin:auto;
   }
 `;
 
@@ -77,7 +78,7 @@ const RecipeTitle = styled.h3`
 
   @media (max-width: 480px) {
     font-size: 24px;
-    margin-bottom: 10px;
+ 
   }
 `;
 
@@ -120,12 +121,14 @@ const RecipeLabel = styled.span`
 const Values = styled.span`
   font-size: 25px;
   margin-right: 8px;
+  font-weight:bold;
   font-family: 'Playfair Display', serif;
 
   @media (max-width: 480px) {
     margin-top: 8px;
-    font-size: 17px;
+    font-size: 15px;
     margin-right: 6px;
+    margin-bottom: 0px;
   }
 `;
 
@@ -191,6 +194,21 @@ const IconImage = styled.img`
   }
 `;
 
+const Icon = styled.img`
+  width: 30px; 
+  height: 30px; 
+
+  
+  @media (max-width: 768px) {
+    width: 15px;
+    height: 15px;
+    margin-top:10px;
+    margin-left:8px;
+ 
+  }
+`;
+
+
 
 
 const Recipies = () => {
@@ -220,15 +238,15 @@ const Recipies = () => {
           <RightHalf>
             <RecipeTitle>Recipe Name</RecipeTitle>
             <RecipeData>
-              <img src={PrepTime} alt="Clock Icon" />
+            <Icon src={PrepTime} alt="Clock Icon" />
               <RecipeLabel>Prep Time:</RecipeLabel>
               <Values>15 Min</Values>
               <Separator>|</Separator>
-              <img src={CookingTime} alt="Clock Icon" />
+              <Icon src={CookingTime} alt="Clock Icon" />
               <RecipeLabel>Cooking Time:</RecipeLabel>
               <Values>30 Min</Values>
               <Separator>|</Separator>
-              <img src={CookingTime} alt="Utensils Icon" />
+              <Icon src={CookingTime} alt="Clock Icon" />
               <RecipeLabel>Portions:</RecipeLabel>
               <Values>7</Values>
             </RecipeData>

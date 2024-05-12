@@ -38,6 +38,7 @@ const Image = styled.img`
 
 const Title = styled.h2`
   font-size: 18px;
+  font-weight:bold;
   text-align: center;
   padding: 10px 0;
 `;

@@ -92,23 +92,23 @@ const Title = styled.h1`
   display: inline;
 
   @media (max-width: 576px) {
-    font-size: 1.1rem; 
+    font-size: 1.3rem; 
   }
 `;
 
 const IconImage = styled.img`
   position: absolute; 
-  top: -22px;
+  top: -30px;
 
-  left: -50px;
+  left: -40px;
   width: 44px;
   height: 44px; 
 
   @media (max-width: 576px) {
-    width: 30px; 
-    height: 30px; 
-    top: -20px; 
-    left: -40px; 
+    width: 25px; 
+    height: 25px; 
+    top: -15px; 
+    left: -25px; 
   }
 `;
 
