@@ -11,6 +11,7 @@ function Register() {
         <div className="plain-section">
           <div className="plain-section-content">
             <img src={logo} alt="Logo" className="logo" />
+            <div className="innerContainer">
             <h2 className="register-heading">Register</h2>
             <p className="register-text" style={{color:"#94959B", fontSize:"20px"}}>Already have an account? <Link to="/login"><span className="green-text">Login</span></Link> </p>
             <form>
@@ -73,6 +74,7 @@ function Register() {
                 </Link>
               </div>
             </form>
+            </div>
           </div>
         </div>
         <div className="colored-section" style={{ backgroundImage: `url(${backgroundImage})` }}>

@@ -32,7 +32,7 @@
 .logo {
   width: 200px;
   height: auto;
-  margin-bottom: 20px;
+  margin-bottom: calc(20px + (30px - 20px) * ((100vw - 400px) / (1200 - 400))); /* Adjust margin based on viewport width */
 }
 
 .plain-section-content {
@@ -41,9 +41,12 @@
   align-items: center;
   max-width: 400px;
   width: 100%;
-  margin: auto 0; /* Added top and bottom margin */
+  margin: auto 0; 
 }
 
+.innerContainer{
+  height:70vh;
+}
 .form-container {
   width: 100%;
 }
