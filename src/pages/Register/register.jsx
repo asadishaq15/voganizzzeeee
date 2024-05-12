@@ -14,6 +14,9 @@ function Register() {
             <div className="innerContainer">
             <h2 className="register-heading">Register</h2>
             <p className="register-text" style={{color:"#94959B", fontSize:"20px"}}>Already have an account? <Link to="/login"><span className="green-text">Login</span></Link> </p>
+           <div className="innerContainer-2">
+
+          
             <form>
               <div className="form-container">
                 <div className="form-group">
@@ -74,6 +77,7 @@ function Register() {
                 </Link>
               </div>
             </form>
+            </div>
             </div>
           </div>
         </div>
