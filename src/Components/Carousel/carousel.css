@@ -30,11 +30,11 @@
 }
 
 .sunshine-icon {
-  width: 50px; /* Set a fixed size for the icon */
+  width: 45px; /* Set a fixed size for the icon */
   height: auto;
   position: absolute; /* Position the icon absolutely */
-  left: 4%; /* Align the icon to the left */
-  top: 34%; /* Vertically center the icon */
+  left: 3%; /* Align the icon to the left */
+  top: 36%; /* Vertically center the icon */
   transform: translateY(-50%); /* Adjust for vertical centering */
 }
 
