@@ -33,8 +33,8 @@
   width: 45px; /* Set a fixed size for the icon */
   height: auto;
   position: absolute; /* Position the icon absolutely */
-  left: 3%; /* Align the icon to the left */
-  top: 36%; /* Vertically center the icon */
+  left: 1%; /* Align the icon to the left */
+  top: 31%; /* Vertically center the icon */
   transform: translateY(-50%); /* Adjust for vertical centering */
 }
 
