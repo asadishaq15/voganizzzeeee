@@ -1,62 +1,68 @@
 /* carousel.css */
 
 .custom-carousel-wrapper {
-    position: relative;
-  }
-  
-  .content {
-    height: 50vh; 
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-  
-  .slide-description {
+  position: relative;
+}
 
-    font-size: 32px; 
-    color: rgb(255, 255, 255);
-    max-width: 80%; 
-    margin: 0 auto; 
-    margin-top: -25px;
-    
+.content {
+  height: 50vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.slide-description-wrapper {
+  display: inline-block;
+  position: relative;
+  max-width: 80%;
+  margin: 0 auto;
+  margin-top: -25px;
+}
+
+.slide-description {
+  font-size: 32px;
+  color: rgb(255, 255, 255);
+  padding-left: 50px; /* Add padding to create space for the icon */
+}
+
+.sunshine-icon {
+  width: 50px; /* Set a fixed size for the icon */
+  height: auto;
+  position: absolute; /* Position the icon absolutely */
+  left: 4%; /* Align the icon to the left */
+  top: 34%; /* Vertically center the icon */
+  transform: translateY(-50%); /* Adjust for vertical centering */
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+  .slide-description {
+      font-size: 20px;
+      padding-left: 40px; /* Adjust padding for smaller screens */
   }
-  
-  
-  /* Media queries for responsiveness */
-  @media screen and (max-width: 768px) {
-    .slide-description {
-      font-size: 20px; 
-      margin-top: -12px;
-    }
-  }
-  
-  @media screen and (max-width: 576px) {
-    .slide-description {
-      font-size: 18px; 
-    }
-  }
-  
 
   .sunshine-icon {
-    width: 50px; 
-    height: auto; 
-    margin-left: 92px; 
- 
-    /* Media query for smaller screens */
-    @media screen and (max-width: 768px) {
-      margin-left: 70px; 
-    }
-  
-    /* Media query for even smaller screens */
-    @media screen and (max-width: 576px) {
-      margin-left: 20px; 
-      width: 30px; 
-    }
+      width: 30px; /* Adjust icon size for smaller screens */
+      top:40%;
   }
-  /* carousel.css */
+}
+
+@media screen and (max-width: 576px) {
+  .slide-description {
+      font-size: 18px;
+      padding-left: 35px; /* Adjust padding for even smaller screens */
+  }
+
+  .sunshine-icon {
+      width: 25px; /* Adjust icon size for even smaller screens */
+  }
+}
+
+/* carousel.css */
 .custom-arrow {
   position: absolute;
   top: 50%;
@@ -79,5 +85,3 @@
 .custom-arrow:hover {
   color: #ccc;
 }
-
-

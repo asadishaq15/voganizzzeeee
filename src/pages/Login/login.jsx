@@ -13,8 +13,10 @@ function Login() {
             <div className="plain-section">
               <div className="plain-section-content">
                 <img src={logo} alt="Logo" className="logo" />
+                <div className="heading-container">
                 <h2 className="login-heading left-align">Login</h2> {/* Added left-align class */}
                 <p className="register-text left-align" style={{color:"#94959B", fontSize:"16px"}}>Don't have an account? <Link to="/register"><span className="green-text">Register</span></Link></p> {/* Added left-align class */}
+                </div>
                 <form>
                   <div className="form-container">
                     <div className="form-group">

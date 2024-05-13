@@ -98,9 +98,9 @@ const Title = styled.h1`
 
 const IconImage = styled.img`
   position: absolute; 
-  top: -30px;
+  top: -25px;
 
-  left: -40px;
+  left: -35px;
   width: 44px;
   height: 44px; 
 

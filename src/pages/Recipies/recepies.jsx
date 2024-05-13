@@ -88,9 +88,20 @@ const RecipeData = styled.div`
   flex-direction: row;
 
 
+ 
   @media (max-width: 480px) {
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
-    margin-bottom: 10px;
+    flex-direction: column; /* Change flex direction to column on smaller screens */
+    align-items: flex-start; /* Align items to the left */
+  }
+`;
+
+const RecipeItem = styled.div`
+  display: flex;
+
+
+  @media (max-width: 480px) {
+    margin-right: 0;
+    margin-bottom: 10px; /* Add some spacing between rows */
   }
 `;
 
@@ -238,18 +249,24 @@ const Recipies = () => {
           <RightHalf>
             <RecipeTitle>Recipe Name</RecipeTitle>
             <RecipeData>
+          <RecipeItem>
             <Icon src={PrepTime} alt="Clock Icon" />
-              <RecipeLabel>Prep Time:</RecipeLabel>
-              <Values>15 Min</Values>
-              <Separator>|</Separator>
-              <Icon src={CookingTime} alt="Clock Icon" />
-              <RecipeLabel>Cooking Time:</RecipeLabel>
-              <Values>30 Min</Values>
-              <Separator>|</Separator>
-              <Icon src={CookingTime} alt="Clock Icon" />
-              <RecipeLabel>Portions:</RecipeLabel>
-              <Values>7</Values>
-            </RecipeData>
+            <RecipeLabel>Prep Time:</RecipeLabel>
+            <Values>15 Min</Values>
+          </RecipeItem>
+          <Separator>|</Separator>
+          <RecipeItem>
+            <Icon src={CookingTime} alt="Clock Icon" />
+            <RecipeLabel>Cooking Time:</RecipeLabel>
+            <Values>30 Min</Values>
+          </RecipeItem>
+          <Separator>|</Separator>
+          <RecipeItem>
+            <Icon src={CookingTime} alt="Clock Icon" />
+            <RecipeLabel>Portions:</RecipeLabel>
+            <Values>7</Values>
+          </RecipeItem>
+        </RecipeData>
             <RecipeParagraph>
               Quid ex ea voluptate velit esse, quid est eligendi optio, cumque nihil impedit, quo minus id, de voluptate velit esse, ut de utilitatibus, nihil impedit, quo quaerimus, non quo aut reiciendis voluptatibus maiores alias consequatur
             </RecipeParagraph>

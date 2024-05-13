@@ -235,7 +235,7 @@ const IconImage = styled.img`
   position: absolute; 
   top: -22px;
 
-  left: -50px;
+  left: -40px;
   width: 44px;
   height: 44px; 
 

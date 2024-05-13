@@ -288,6 +288,7 @@ const Navbar222 = () => {
               <SearchInput
                 type="text"
                 placeholder="Search"
+                id="seactText"
                 value={query}
                 onChange={handleInputChange}
               />

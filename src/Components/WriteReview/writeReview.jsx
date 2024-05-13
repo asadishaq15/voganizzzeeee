@@ -105,6 +105,12 @@ const SubmitButton = styled.button`
   }
 `;
 
+const InputWrapper = styled.div`
+  width: 100%;
+`;
+const TextareaWrapper = styled.div`
+  width: 100%;
+`;
 const WriteReviewComponent = () => {
   const [rating, setRating] = useState(0);
   const [name, setName] = useState('');
@@ -153,36 +159,44 @@ const WriteReviewComponent = () => {
           </Star>
         ))}
       </RatingContainer>
-      <InputContainer>
-        <Label htmlFor="name">Name</Label>
-        <Input
-          type="text"
-          id="name"
-          value={name}
-          onChange={handleNameChange}
-          required
-        />
-      </InputContainer>
-      <InputContainer>
-        <Label htmlFor="email">Email</Label>
-        <Input
-          type="email"
-          id="email"
-          value={email}
-          onChange={handleEmailChange}
-          required
-        />
-      </InputContainer>
-      <InputContainer>
-        <Label htmlFor="reviewText">Review Text</Label>
-        <Textarea
-          id="reviewText"
-          value={reviewText}
-          onChange={handleReviewTextChange}
-          rows={4}
-          required
-        />
-      </InputContainer>
+   
+        <InputContainer>
+          <Label htmlFor="name">Name</Label>
+          <InputWrapper>
+            <Input
+              type="name"
+              id="name"
+              value={email}
+              onChange={handleEmailChange}
+              required
+            />
+          </InputWrapper>
+        </InputContainer>
+        <InputContainer>
+          <Label htmlFor="email">Email</Label>
+          <InputWrapper>
+            <Input
+              type="email"
+              id="email"
+              value={email}
+              onChange={handleEmailChange}
+              required
+            />
+          </InputWrapper>
+        </InputContainer>
+        <InputContainer>
+          <Label htmlFor="reviewText">Review Text</Label>
+          <TextareaWrapper>
+            <Textarea
+              id="reviewText"
+              value={reviewText}
+              onChange={handleReviewTextChange}
+              rows={4}
+              required
+            />
+          </TextareaWrapper>
+        </InputContainer>
+
       <SubmitButton type="submit" onClick={handleSubmit}>
         Submit Review
       </SubmitButton>
